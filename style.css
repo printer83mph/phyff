@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background-image: url("media/bg.png");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+}
+
+nav {
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+}
+
+nav a {
+  margin: auto;
+  background-color: white;
+}
