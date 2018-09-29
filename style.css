@@ -1,21 +1,78 @@
 body {
   margin: 0;
+  width: 100%;
   background-image: url("media/bg.png");
   background-position: 50% 0%;
   background-repeat: no-repeat;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 nav {
   height: 130px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: baseline;
-  align-content: center;
+  margin: auto;
+  max-width: 700px;
+  text-align: center;
+  transition: 0.8s ease;
+}
+
+.open-nav {
+  height: 340px;
+  transition: 0.5s ease;
 }
 
 nav a {
-  margin: auto;
+  display: block;
+  position: relative;
+  z-index: -1;
+  top:-330px;
+  width: 50px;
+  margin: 10px auto;
+  padding: 10px 20px;
   background-color: white;
+  border-radius: 7px;
+  color: black;
+  opacity: 0;
+  font-family: "Roboto";
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.8s ease;
+}
+
+.toggled-nav {
+  top: 0px;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+main {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+  }
+  .open-nav {
+    height: 130px;
+  }
+  .before-logo {
+    order: -1;
+  }
+  nav a {
+    margin: auto;
+    top: 0px;
+    opacity: 1;
+    transition: 0.2s;
+    z-index: 0;
+  }
+  nav a:hover {
+    transform: scale(1.1);
+  }
 }
