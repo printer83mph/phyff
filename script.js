@@ -11,6 +11,10 @@ window.onload = function() {
 
   logo.addEventListener("click", function(e) {
     toggled = !toggled;
+    var id = window.setTimeout(function() {}, 0);
+    while (id--) {
+      window.clearTimeout(id);
+    }
     if (toggled) {
       nav.classList.add("open-nav");
       window.setTimeout(function() {nav4.classList.add("toggled-nav")}, 100);
