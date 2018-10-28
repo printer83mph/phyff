@@ -1,104 +1,132 @@
-body {
+html {
+  height: 400%;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
   width: 100%;
-  background-image: url("media/bg.png");
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Mono", monospace, sans-serif;
   color: rgba(0, 0, 0, .87);
+  background-color: black;
 }
 
 nav {
-  height: 130px;
-  margin: 10px auto;
-  max-width: 700px;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
   text-align: center;
-  transition: 0.8s ease;
 }
 
-.open-nav {
-  height: 340px;
-  transition: 0.5s ease;
+.logo {
 }
 
-nav img {
-  position: relative;
-  z-index: 10;
-}
+.top {
+  margin: auto;
+  right: 20px;
 
-nav a {
-  display: block;
-  position: relative;
-  top:-330px;
-  width: 50px;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: white;
-  border-radius: 7px;
-  color: rgba(0, 0, 0, .87);
-  opacity: 0;
-  font-family: "Roboto";
-  font-weight: 900;
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
   text-decoration: none;
-  transition: 0.8s ease;
 }
 
-.toggled-nav {
-  top: 0px;
-  opacity: 1;
-  transition: 0.5s ease;
+.splash {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  font-size: 14pt;
+.headerspace {
+  height: 120px;
 }
 
-article {
-  margin: 20px 0;
-  padding: 20px 40px;
-  border-radius: 20px;
-  background-color: white;
+.colcontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-grow: 7;
 }
 
-h1 {
-  font-size: 25pt;
-  margin: 10px 0;
+.splashcol {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center center;
 }
 
-p {
-  margin: 10px 0;
+.splashcol div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-@media only screen and (min-width: 500px) {
-  nav {
-    display: flex;
+.submit {
+  background-image: url("media/placeholder1.png");
+}
+.submit div {
+  background-color: rgba(116, 77, 57, 0.5);
+}
+
+.attend {
+  background-image: url("media/placeholder2.png");
+}
+.attend div {
+  background-color: rgba(57, 108, 116, 0.5);
+}
+
+.learn {
+  background-image: url("media/placeholder3.png");
+}
+.learn div {
+  background-color: rgba(159, 151, 85, 0.5);
+}
+
+.splashcol h1 {
+  color: white;
+  z-index: 1;
+  width: auto;
+  margin: auto;
+  font-size: 40px;
+}
+
+.footer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: black;
+  color: rgba(255, 255, 255, .54);
+}
+
+@media screen and (min-width: 700px) {
+  
+  .colcontainer {
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: baseline;
-    align-content: center;
-    margin: 20px auto;
   }
-  .open-nav {
-    height: 130px;
-  }
-  .before-logo {
-    order: -1;
-  }
-  nav a {
-    margin: auto;
-    top: 0px;
-    opacity: 1;
+  .splashcol h1, .splashcol div {
     transition: 0.2s;
-    color: rgba(0, 0, 0, .6);
   }
-  nav a:hover {
-    transform: scale(1.1);
-    color: rgba(0, 0, 0, .87);
+  .splashcol:hover h1 {
+    transform: scale(1.05);
   }
-  article {
-    padding: 20px 60px;
+  .splashcol div {
+    opacity: 0.7;
+  }
+  .splashcol:hover div {
+    opacity: 1;
   }
 }
