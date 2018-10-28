@@ -1,5 +1,5 @@
 html {
-  height: 400%;
+  height: calc((100% - 120px)*4 + 120px);
 }
 
 html, body {
@@ -13,30 +13,29 @@ body {
   font-family: "Roboto Mono", monospace, sans-serif;
   color: rgba(0, 0, 0, .87);
   background-color: black;
-}
-
-nav {
-  z-index: 2;
-  position: fixed;
-  width: 100%;
   text-align: center;
 }
 
-.logo {
+.top {
+  display: block;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, .8);
 }
 
-.top {
-  margin: auto;
-  right: 20px;
+.logo {
+  height: inherit;
+}
 
-  padding: 10px;
-  border-radius: 50px;
-  color: white;
-  text-decoration: none;
+section {
+  height: calc((100% - 120px)/4);
 }
 
 .splash {
-  height: 25%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -73,24 +72,24 @@ nav {
   right: 0;
 }
 
-.submit {
+.submitc {
   background-image: url("media/placeholder1.png");
 }
-.submit div {
+.submitc div {
   background-color: rgba(116, 77, 57, 0.5);
 }
 
-.attend {
+.attendc {
   background-image: url("media/placeholder2.png");
 }
-.attend div {
+.attendc div {
   background-color: rgba(57, 108, 116, 0.5);
 }
 
-.learn {
+.learnc {
   background-image: url("media/placeholder3.png");
 }
-.learn div {
+.learnc div {
   background-color: rgba(159, 151, 85, 0.5);
 }
 
@@ -112,8 +111,54 @@ nav {
   color: rgba(255, 255, 255, .54);
 }
 
+.minus {
+  position:relative;
+  top:-120px;
+}
+
+.submit {
+  background-color: rgba(116, 77, 57, 1);
+}
+
+.attend {
+  background-color: rgba(57, 108, 116, 1);
+}
+
+.learn {
+  background-color: rgba(159, 151, 85, 1);
+}
+
 @media screen and (min-width: 700px) {
-  
+  html {
+    height: 400%;
+  }
+  .headerspace {
+    height: 0;
+  }
+  .top {
+    position: fixed;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 60px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 200px;
+    background: none;
+    transition: 0.2s;
+  }
+  .logo {
+    height: inherit;
+  }
+  .smaller {
+    height: 120px;
+    top: 10px;
+  }
+  section {
+    height: 25%;
+  }
   .colcontainer {
     flex-direction: row;
   }
@@ -128,5 +173,8 @@ nav {
   }
   .splashcol:hover div {
     opacity: 1;
+  }
+  .minus {
+    top: 0;
   }
 }
