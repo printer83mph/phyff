@@ -140,17 +140,19 @@ section {
     display: block;
     left: 0;
     right: 0;
-    top: 60px;
+    top: 5%;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
     width: auto;
     height: 200px;
+    max-height: 25%;
     background: none;
     transition: 0.2s;
   }
   .logo {
-    height: inherit;
+    height: 100%;
+    width: auto;
   }
   .smaller {
     height: 120px;
