@@ -1,5 +1,5 @@
 html {
-  height: calc((100% - 120px)*4 + 120px);
+  /* height: calc((100% - 120px)*4 + 120px); */
 }
 
 html, body {
@@ -32,13 +32,15 @@ body {
 }
 
 section {
-  height: calc((100% - 120px)/4);
+  /* height: calc((100% - 120px)/4); */
+  min-height: calc(100vh - 120px);
 }
 
 .splash {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  height: 100vh;
 }
 
 .headerspace {
@@ -146,19 +148,20 @@ section {
     margin-right: auto;
     width: auto;
     height: 200px;
-    max-height: 25%;
+    max-height: 25vh;
     background: none;
     transition: 0.2s;
   }
   .logo {
     width: auto;
+    max-height: inherit;
   }
   .smaller {
     height: 120px;
     top: 10px;
   }
   section {
-    height: 25%;
+    min-height: 100vh;
   }
   .colcontainer {
     flex-direction: row;
