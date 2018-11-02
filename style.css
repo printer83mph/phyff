@@ -28,8 +28,22 @@ body {
 }
 
 section {
-  /* height: calc((100% - 120px)/4); */
   min-height: calc(100vh - 120px);
+}
+
+.section article {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section h1 {
+  font-size: 32px;
+  margin: 0;
+  padding: 20px 0;
+  background-color: rgba(0,0,0,.5);
+  color: white;
 }
 
 .splash {
@@ -157,6 +171,9 @@ section {
   }
   section {
     min-height: 100vh;
+  }
+  .section {
+    text-align: left;
   }
   .splash {
     height: 100vh;
