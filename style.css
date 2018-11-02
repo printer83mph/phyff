@@ -32,18 +32,18 @@ section {
 }
 
 .section article {
+  min-height: inherit;
   max-width: 1000px;
   margin: auto;
   display: flex;
   flex-direction: column;
+  color: rgba(255,255,255,0.87);
 }
 
 .section h1 {
   font-size: 32px;
   margin: 0;
   padding: 20px 0;
-  background-color: rgba(0,0,0,.5);
-  color: white;
 }
 
 .splash {
@@ -84,21 +84,21 @@ section {
 }
 
 .submitc {
-  background-image: url("media/placeholder1.png");
+  background-image: url("media/submit.png");
 }
 .submitc div {
   background-color: rgba(116, 77, 57, 0.5);
 }
 
 .attendc {
-  background-image: url("media/placeholder2.png");
+  background-image: url("media/attend.png");
 }
 .attendc div {
   background-color: rgba(57, 108, 116, 0.5);
 }
 
 .learnc {
-  background-image: url("media/placeholder3.png");
+  background-image: url("media/learn.png");
 }
 .learnc div {
   background-color: rgba(159, 151, 85, 0.5);
@@ -138,6 +138,29 @@ section {
 .learn {
   background-color: rgba(159, 151, 85, 1);
 }
+.learn h2 {
+  margin: 0;
+  padding: 20px 0;
+}
+.learn h2, .people {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.people {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.people figure {
+  margin: 0 auto;
+}
+.people figcaption {
+  margin: 20px;
+}
+.people img {
+  width: 300px;
+}
 
 @media screen and (min-width: 700px) {
   html {
@@ -147,7 +170,7 @@ section {
     height: 0;
   }
   .top {
-    position: fixed;
+    position: absolute;
     display: block;
     left: 0;
     right: 0;
@@ -159,22 +182,25 @@ section {
     height: 200px;
     max-height: 25vh;
     background: none;
-    transition: 0.2s;
+    transition: 0.5s;
   }
   .logo {
     width: auto;
     max-height: inherit;
   }
-  .smaller {
+  /* .smaller {
     height: 120px;
-    top: 10px;
-  }
+    top: -120px;
+  } */
   section {
     min-height: 100vh;
   }
-  .section {
-    text-align: left;
+  .section article {
+    background-color: rgba(0,0,0,.3);
   }
+  /* .section {
+    text-align: left;
+  } */
   .splash {
     height: 100vh;
   }
@@ -192,6 +218,17 @@ section {
   }
   .splashcol:hover div {
     opacity: 1;
+  }
+  .people {
+    flex-direction: row;
+    align-items: baseline;
+    /* margin: auto; */
+  }
+  .people figure {
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-width: 300px;
   }
   .minus {
     top: 0;
