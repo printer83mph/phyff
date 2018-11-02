@@ -1,7 +1,3 @@
-html {
-  /* height: calc((100% - 120px)*4 + 120px); */
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -40,7 +36,6 @@ section {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  height: 100vh;
 }
 
 .headerspace {
@@ -162,6 +157,9 @@ section {
   }
   section {
     min-height: 100vh;
+  }
+  .splash {
+    height: 100vh;
   }
   .colcontainer {
     flex-direction: row;
