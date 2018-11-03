@@ -109,7 +109,7 @@ section {
   background-image: url("media/learn.png");
 }
 .learnc div {
-  background-color: rgba(159, 151, 85, 0.5);
+  background-color: rgba(143, 123, 69, 0.5);
 }
 
 .splashcol h1 {
@@ -175,9 +175,21 @@ section {
 .attend {
   background-color: rgba(57, 108, 116, 1);
 }
+.attend-button {
+  transition: 0.2s;
+  border-radius: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  font-size: 30px;
+}
 
 .learn {
-  background-color: rgba(159, 151, 85, 1);
+  background-color: rgb(206, 177, 98);
 }
 .learn h2 {
   margin: 0;
@@ -255,8 +267,8 @@ section {
   .splashcol:hover div {
     opacity: 1;
   }
-  .submit-button:hover {
-    transform: scale(1.1);
+  .submit-button:hover, .attend-button:hover {
+    background-color: rgba(0,0,0,0.5);
   }
   .submit li {
     border-right: 2px dotted rgba(255,255,255,0.5);
