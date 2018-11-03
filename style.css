@@ -178,7 +178,8 @@ section {
 .attend-button {
   transition: 0.2s;
   border-radius: 30px;
-  display: block;
+  display: inline-block;
+  max-width: 162px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
