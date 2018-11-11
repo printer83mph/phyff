@@ -1,16 +1,27 @@
 html, body {
   margin: 0;
   padding: 0;
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
-  width: 100%;
+  height: auto;
   font-family: "Roboto Mono", monospace, sans-serif;
   color: rgba(0, 0, 0, .87);
   background-color: black;
   text-align: center;
+}
+
+body::-webkit-scrollbar {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255,255,255,0.4);
 }
 
 .top {
@@ -29,7 +40,27 @@ body {
 }
 
 section {
+  position: relative;
   min-height: calc(100vh - 120px);
+}
+
+.back-up {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  background-image: url("media/up.png");
+  background-color: rgba(0,0,0,0.5);
+  background-size: cover;
+  border-radius: 25px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.back-up:hover {
+  opacity: 1;
 }
 
 .section article {
@@ -137,7 +168,7 @@ section {
 }
 
 .submit {
-  background-color: rgba(116, 77, 57, 1);
+  background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.png");
 }
 
 .submit-div {
@@ -174,7 +205,7 @@ section {
 }
 
 .attend {
-  background-color: rgba(57, 108, 116, 1);
+  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/attend.png");
 }
 .attend-button {
   transition: 0.2s;
@@ -191,7 +222,7 @@ section {
 }
 
 .learn {
-  background-color: rgb(206, 177, 98);
+  background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/learn.png");
 }
 .learn h2 {
   margin: 0;
@@ -215,6 +246,12 @@ section {
 }
 .people img {
   width: 300px;
+}
+
+.section {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (min-width: 700px) {
@@ -242,7 +279,10 @@ section {
     width: auto;
     max-height: inherit;
   }
-  section {
+  .back-up {
+    display: block;
+  }
+  .section {
     min-height: 100vh;
   }
   .section article {
