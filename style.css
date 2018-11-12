@@ -138,14 +138,14 @@ section {
   background-image: url("media/attend.png");
 }
 .attendc div {
-  background-color: rgba(57, 108, 116, 0.5);
+  background-color: rgba(143, 123, 69, 0.5);
 }
 
 .learnc {
   background-image: url("media/learn.png");
 }
 .learnc div {
-  background-color: rgba(143, 123, 69, 0.5);
+  background-color: rgba(57, 108, 116, 0.5);
 }
 
 .splashcol h1 {
@@ -209,7 +209,7 @@ section {
 }
 
 .attend {
-  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/attend.png");
+  background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.png");
 }
 .attend-button {
   transition: 0.2s;
@@ -226,7 +226,7 @@ section {
 }
 
 .learn {
-  background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/learn.png");
+  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.png");
 }
 .learn h2 {
   margin: 0;
@@ -235,6 +235,11 @@ section {
 .learn h2, .people {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.more {
+  background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.png");
+}
+
 .people {
   display: flex;
   flex-direction: column;
