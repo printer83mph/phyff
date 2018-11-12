@@ -237,19 +237,16 @@ section {
   background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.png");
 }
 
-.more h2 {
+.people h2 {
   margin: 0;
   padding: 20px 0;
 }
-.more h2, .people {
-  background-color: rgba(0, 0, 0, 0.3);
-}
 
-.more {
+.people{
   background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.png");
 }
 
-.people {
+.peoplediv {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -336,7 +333,7 @@ section {
   .submit li:last-of-type {
     border-right: none;
   }
-  .people {
+  .peoplediv {
     flex-direction: row;
     align-items: baseline;
     /* margin: auto; */
