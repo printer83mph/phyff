@@ -64,7 +64,7 @@ section {
   top: 20px;
   height: 50px;
   width: 50px;
-  background-image: url("media/up.png");
+  background-image: url("media/up.jpg");
   background-color: rgba(0,0,0,0.5);
   background-size: cover;
   border-radius: 25px;
@@ -136,21 +136,21 @@ section {
 }
 
 .submitc {
-  background-image: url("media/submit.png");
+  background-image: url("media/submit.jpg");
 }
 .submitc div {
   background-color: rgba(116, 77, 57, 0.5);
 }
 
 .attendc {
-  background-image: url("media/attend.png");
+  background-image: url("media/attend.jpg");
 }
 .attendc div {
   background-color: rgba(143, 123, 69, 0.5);
 }
 
 .learnc {
-  background-image: url("media/learn.png");
+  background-image: url("media/learn.jpg");
 }
 .learnc div {
   background-color: rgba(57, 108, 116, 0.5);
@@ -180,7 +180,7 @@ section {
 }
 
 .submit {
-  background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.png");
+  background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
 }
 
 .submit-div {
@@ -217,7 +217,7 @@ section {
 }
 
 .attend {
-  background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.png");
+  background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.jpg");
 }
 .attend-button {
   transition: 0.2s;
@@ -234,7 +234,7 @@ section {
 }
 
 .learn {
-  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.png");
+  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
 }
 
 .people h2 {
@@ -243,7 +243,7 @@ section {
 }
 
 .people{
-  background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.png");
+  background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.jpg");
 }
 
 .peoplediv {
