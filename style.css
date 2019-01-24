@@ -38,6 +38,12 @@ a {
   width: 100%;
   height: 100px;
   background-color: rgba(0, 0, 0, .8);
+  transition: .2s;
+}
+
+.small {
+  padding: 5px 0;
+  height: 65px;
 }
 
 .logo {
@@ -79,6 +85,10 @@ section {
 
 .floating-back-up {
   position: fixed;
+}
+
+.section {
+  min-height: calc(100vh - 75px);
 }
 
 .section article {
@@ -191,7 +201,7 @@ section {
 
 .minus {
   position:relative;
-  top:-120px;
+  top:-75px;
 }
 
 .submit {
