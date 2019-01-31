@@ -312,7 +312,7 @@ section {
 .workshop-list li:before {
   content: "+";
   font-size: 30px;
-  padding: 3px 15px;
+  padding: 0 15px;
   float: left;
 }
 
