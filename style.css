@@ -269,6 +269,7 @@ section {
 .attend-split div {
   flex-grow: 1;
   height: auto;
+  margin-bottom: 30px;
 }
 
 .attend-split h2 {
@@ -473,6 +474,10 @@ section {
 
   .attend h1 {
     font-size: 80px;
+  }
+
+  .attend-split div {
+    margin-bottom: 0;
   }
 
   .attend-button {
