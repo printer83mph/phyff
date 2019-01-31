@@ -18,13 +18,14 @@ window.onload = function () {
         }
     });
 
-    var els = document.getElementsByClassName("expand-btn");
+    var els = document.getElementsByClassName("wks-item");
 
     for (let i = 0; i < els.length; i++) {
         els[i].addEventListener("click", function () {
-            var text = this.nextElementSibling;
+            console.log(this.childNodes);
+            var text = this.childNodes[3];
             text.style.maxHeight = (text.style.maxHeight ? null : text.scrollHeight + 10 + "px");
-            text.classList.toggle("open");
+            this.classList.toggle("open");
         });
     }
 
