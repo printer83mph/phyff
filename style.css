@@ -533,3 +533,15 @@ a {
   /* Internet Explorer/Edge */
   user-select: none;
 }
+
+.learn-block-first {
+    background-color: rgb(57, 108, 116, 0.5);
+    
+}
+
+.learn-block-alt {
+    background-color: rgb(30, 59, 63, 0.5);
+}
+.inline-link {
+    text-decoration: underline;
+}
