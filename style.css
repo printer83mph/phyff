@@ -41,7 +41,7 @@ a,
   width: 100%;
   height: 100px;
   background-color: rgba(0, 0, 0, .8);
-  transition: .2s;
+  transition: height .2s;
 }
 
 .small {
@@ -78,7 +78,7 @@ section {
   background-size: cover;
   border-radius: 25px;
   opacity: 0.7;
-  transition: 0.2s;
+  transition: opacity 0.2s;
   z-index: 5;
 }
 
@@ -116,6 +116,8 @@ section {
   padding: 10px 0 20px 0;
   text-align: left;
 }
+
+/* --- SPLASH PAGE --- */
 
 .splash {
   display: flex;
@@ -170,7 +172,7 @@ section {
   right: 0;
   margin: auto;
   top: 70%;
-  transition: 0.2s;
+  /* transition: color 0.2s; */
 }
 
 .attendc {
@@ -212,6 +214,8 @@ section {
   top: -75px;
 }
 
+/* --- SUBMIT SECTION --- */
+
 .submit {
   background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
 }
@@ -234,7 +238,7 @@ section {
   border-radius: 30px;
   padding: 30px 70px;
   margin: 20px 0 0 0;
-  transition: 0.2s;
+  transition: background-color 0.2s;
 }
 
 .submit ul {
@@ -253,6 +257,8 @@ section {
   flex-grow: 1;
   padding: 15px 0;
 }
+
+/* --- ATTEND SECTION --- */
 
 .attend {
   background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.jpg");
@@ -286,13 +292,8 @@ section {
   padding: 0;
 }
 
-.workshop-attend {
-  font-size: 30px;
-  margin: 20px 10px 0 10px;
-}
-
 .attend-button {
-  transition: 0.2s;
+  transition: background-color 0.2s;
   border-radius: 30px;
   display: inline-block;
   padding: 40px;
@@ -301,6 +302,46 @@ section {
   text-decoration: none;
   text-align: center;
   font-size: 30px;
+}
+
+.day-schedule {
+  padding: 0;
+  margin: 0;
+}
+
+.day-schedule li {
+  list-style: none;
+}
+
+.day-schedule li:nth-child(2n) {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.day-schedule h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.day-schedule p {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.day-schedule h3 {
+  margin: 0;
+  padding: 10px;
+}
+
+/* --- LEARN SECTION --- */
+
+.learn {
+  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
+}
+
+.workshop-attend {
+  font-size: 30px;
+  margin: 20px 10px;
 }
 
 .workshop-list {
@@ -347,10 +388,6 @@ section {
 
 .open p {
   opacity: 1 !important;
-}
-
-.learn {
-  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
 }
 
 .people h2 {
@@ -402,6 +439,8 @@ section {
   }
 }
 
+/* --- RESPONSIVE SHIT --- */
+
 @media screen and (min-width: 1000px) {
   html {
     height: 400%;
@@ -449,7 +488,7 @@ section {
 
   .splashcol h1,
   .splashcol div {
-    transition: 0.2s;
+    transition: opacity 0.2s;
   }
 
   .splashcol:hover h1 {
@@ -498,6 +537,23 @@ section {
   .attend-button {
     font-size: 36px;
     width: auto;
+  }
+
+  .day-schedule {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .day-schedule li {
+    width: 50%;
+  }
+
+  .day-schedule li:nth-child(2n) {
+    background: none;
+  }
+
+  .day-schedule li:nth-child(4n), .day-schedule li:nth-child(4n-1) {
+    background-color: rgba(0, 0, 0, .2);
   }
 
   .peoplediv {
