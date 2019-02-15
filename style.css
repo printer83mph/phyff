@@ -274,7 +274,6 @@ section {
   text-align: left;
   padding: 30px 40px;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 .attend-split div {
@@ -309,28 +308,41 @@ section {
   margin: 0;
 }
 
-.day-schedule li {
-  list-style: none;
-}
-
-.day-schedule li:nth-child(2n) {
-  background-color: rgba(0, 0, 0, .2);
-}
-
-.day-schedule h2 {
-  margin: 0;
-  padding: 10px;
-}
-
 .day-schedule p {
   margin: 0;
   padding: 5px;
   text-align: center;
 }
 
+.day-schedule span {
+  font-weight: bold;
+  display: block;
+}
+
 .day-schedule h3 {
-  margin: 0;
-  padding: 10px;
+  /* margin: 0; */
+  text-align: center;
+  position: relative;
+}
+
+.day-schedule h3::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 35%;
+  height: 2px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.day-schedule h3::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 35%;
+  height: 2px;
+  background-color: rgba(255,255,255,0.2);
 }
 
 /* --- LEARN SECTION --- */
@@ -546,21 +558,8 @@ section {
     width: auto;
   }
 
-  .day-schedule {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .day-schedule li {
-    width: 50%;
-  }
-
-  .day-schedule li:nth-child(2n) {
-    background: none;
-  }
-
-  .day-schedule li:nth-child(4n), .day-schedule li:nth-child(4n-1) {
-    background-color: rgba(0, 0, 0, .2);
+  .day-schedule h3::after, .day-schedule h3::before {
+    width: 40%;
   }
 
   .peoplediv {
