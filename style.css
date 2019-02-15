@@ -339,6 +339,14 @@ section {
   background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
 }
 
+.learn div:nth-child(2n) {
+  background-color: rgba(0, 0, 0, .2);
+}
+.inline-link {
+  text-decoration: underline;
+}
+
+
 .workshop-attend {
   font-size: 30px;
   margin: 20px 10px;
@@ -352,7 +360,6 @@ section {
 
 .workshop-list li {
   list-style: none;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 .workshop-list li:before {
@@ -366,8 +373,8 @@ section {
   content: "-" !important;
 }
 
-.workshop-list li:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.1);
+.workshop-list li:nth-child(2n+1) {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .workshop-list h3 {
@@ -588,16 +595,4 @@ a {
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
-}
-
-.learn-block-first {
-    background-color: rgb(57, 108, 116, 0.5);
-    
-}
-
-.learn-block-alt {
-    background-color: rgb(30, 59, 63, 0.5);
-}
-.inline-link {
-    text-decoration: underline;
 }
