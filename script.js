@@ -19,7 +19,7 @@
             }
         });
 
-        var els = document.getElementsByClassName("wks-item");
+        var els = document.getElementById("workshop-list").childNodes;
 
         for (let i = 0; i < els.length; i++) {
             els[i].addEventListener("click", function () {

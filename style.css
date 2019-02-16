@@ -41,7 +41,7 @@ a,
   width: 100%;
   height: 100px;
   background-color: rgba(0, 0, 0, .8);
-  transition: .2s;
+  transition: height .2s;
 }
 
 .small {
@@ -59,6 +59,7 @@ a,
 
 .footer a {
   font-size: 20px;
+  text-decoration: underline;
 }
 
 section {
@@ -78,7 +79,7 @@ section {
   background-size: cover;
   border-radius: 25px;
   opacity: 0.7;
-  transition: 0.2s;
+  transition: opacity 0.2s;
   z-index: 5;
 }
 
@@ -116,6 +117,8 @@ section {
   padding: 10px 0 20px 0;
   text-align: left;
 }
+
+/* --- SPLASH PAGE --- */
 
 .splash {
   display: flex;
@@ -170,7 +173,7 @@ section {
   right: 0;
   margin: auto;
   top: 70%;
-  transition: 0.2s;
+  /* transition: color 0.2s; */
 }
 
 .attendc {
@@ -212,6 +215,8 @@ section {
   top: -75px;
 }
 
+/* --- SUBMIT SECTION --- */
+
 .submit {
   background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
 }
@@ -234,7 +239,7 @@ section {
   border-radius: 30px;
   padding: 30px 70px;
   margin: 20px 0 0 0;
-  transition: 0.2s;
+  transition: background-color 0.2s;
 }
 
 .submit ul {
@@ -254,6 +259,8 @@ section {
   padding: 15px 0;
 }
 
+/* --- ATTEND SECTION --- */
+
 .attend {
   background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.jpg");
 }
@@ -268,7 +275,6 @@ section {
   text-align: left;
   padding: 30px 40px;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 .attend-split div {
@@ -286,13 +292,8 @@ section {
   padding: 0;
 }
 
-.workshop-attend {
-  font-size: 30px;
-  margin: 20px 10px 0 10px;
-}
-
 .attend-button {
-  transition: 0.2s;
+  transition: background-color 0.2s;
   border-radius: 30px;
   display: inline-block;
   padding: 40px;
@@ -303,15 +304,77 @@ section {
   font-size: 30px;
 }
 
+.day-schedule {
+  padding: 0;
+  margin: 0;
+}
+
+.day-schedule p {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.day-schedule span {
+  font-weight: normal;
+  display: block;
+}
+
+.day-schedule h3 {
+  /* margin: 0; */
+  text-align: center;
+  position: relative;
+}
+
+.day-schedule h3::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 35%;
+  height: 2px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.day-schedule h3::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 35%;
+  height: 2px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* --- LEARN SECTION --- */
+
+.learn {
+  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
+}
+
+.about-phyff p {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
+}
+.about-phyff p:last-child {
+  border-bottom: none;
+}
+.inline-link {
+  text-decoration: underline;
+}
+
 .workshop-list {
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
   text-align: left;
 }
 
 .workshop-list li {
   list-style: none;
-  background-color: rgba(0, 0, 0, .2);
 }
 
 .workshop-list li:before {
@@ -325,8 +388,8 @@ section {
   content: "-" !important;
 }
 
-.workshop-list li:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.1);
+.workshop-list li:nth-child(2n+1) {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .workshop-list h3 {
@@ -347,10 +410,6 @@ section {
 
 .open p {
   opacity: 1 !important;
-}
-
-.learn {
-  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
 }
 
 .people h2 {
@@ -402,6 +461,8 @@ section {
   }
 }
 
+/* --- RESPONSIVE SHIT --- */
+
 @media screen and (min-width: 1000px) {
   html {
     height: 400%;
@@ -449,7 +510,7 @@ section {
 
   .splashcol h1,
   .splashcol div {
-    transition: 0.2s;
+    transition: opacity 0.2s;
   }
 
   .splashcol:hover h1 {
@@ -500,6 +561,18 @@ section {
     width: auto;
   }
 
+  .day-schedule h3::after, .day-schedule h3::before {
+    width: 40%;
+  }
+
+  .day-schedule span {
+    display: inline;
+  }
+
+  .day-schedule span::before {
+    content: " - ";
+  }
+
   .peoplediv {
     flex-direction: row;
     align-items: baseline;
@@ -532,16 +605,4 @@ a {
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
-}
-
-.learn-block-first {
-    background-color: rgb(57, 108, 116, 0.5);
-    
-}
-
-.learn-block-alt {
-    background-color: rgb(30, 59, 63, 0.5);
-}
-.inline-link {
-    text-decoration: underline;
 }
