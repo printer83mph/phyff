@@ -312,10 +312,11 @@ section {
   margin: 0;
   padding: 5px;
   text-align: center;
+  font-weight: bold;
 }
 
 .day-schedule span {
-  font-weight: bold;
+  font-weight: normal;
   display: block;
 }
 
@@ -560,6 +561,14 @@ section {
 
   .day-schedule h3::after, .day-schedule h3::before {
     width: 40%;
+  }
+
+  .day-schedule span {
+    display: inline;
+  }
+
+  .day-schedule span::before {
+    content: " - ";
   }
 
   .peoplediv {
