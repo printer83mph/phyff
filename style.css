@@ -230,6 +230,10 @@ section {
   background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
 }
 
+.center-text {
+  text-align: center !important;
+}
+
 .submit h1{
   font-size: 60px;
   margin: 0;
@@ -244,7 +248,7 @@ section {
   grid-template-columns: 50fr 50fr;
   grid-template-rows: 50fr 50fr;
 }
-
+  
 .submit-grid p{
   padding: 5px 40px;
   text-align: center;
