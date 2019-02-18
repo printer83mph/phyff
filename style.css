@@ -49,8 +49,17 @@ a,
   height: 65px;
 }
 
+.small div {
+  background-image: url("media/logo_mobile.png");
+}
+
 .logo {
   height: inherit;
+  width: 100%;
+  background-image: url("media/logo.png");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .footer {
@@ -421,6 +430,16 @@ section {
   text-align: left;
 }
 
+.nathaniel-bio {
+  text-align: left;
+  margin: 20px 20px 20px 20px;
+}
+
+.nathaniel-bio img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .workshop-list li {
   list-style: none;
 }
@@ -459,6 +478,8 @@ section {
 .open p {
   opacity: 1 !important;
 }
+
+/* --- PEOPLE SECTION --- */
 
 .people h2 {
   margin: 0;
@@ -502,11 +523,11 @@ section {
 
   .attend h1 {
     font-size: 70px;
-    }min-width: 1000px)
+  }
 
-.attend-button {
-  margin: auto 40px auto 0;
-}
+  .attend-button {
+    margin: auto 40px auto 0;
+  }
 }
 
 /* --- RESPONSIVE SHIT --- */
@@ -527,7 +548,7 @@ section {
     padding-top: 50px;
     height: 200px;
     max-height: 25vh;
-    width: auto;
+    width: 400px;
     background: none;
   }
 
@@ -607,6 +628,12 @@ section {
   .attend-button {
     font-size: 36px;
     width: auto;
+  }
+
+  .nathaniel-bio img {
+    width: 50%;
+    float: right;
+    margin: 20px 0px 20px 20px;
   }
 
   .day-schedule h3::after, .day-schedule h3::before {
