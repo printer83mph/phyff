@@ -528,6 +528,7 @@ section {
   .logo {
     width: auto;
     max-height: inherit;
+    background-image: url("media/logo.png") !important;
   }
 
   footer {
