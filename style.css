@@ -49,8 +49,17 @@ a,
   height: 65px;
 }
 
+.small div {
+  background-image: url("media/logo_mobile.png");
+}
+
 .logo {
   height: inherit;
+  width: 100%;
+  background-image: url("media/logo.png");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .footer {
@@ -221,9 +230,30 @@ section {
   background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
 }
 
+.center-text {
+  text-align: center !important;
+}
+
+.submit h1{
+  font-size: 60px;
+  margin: 0;
+}
+
 .submit-div {
-  background-color: rgba(0, 0, 0, 0.3);
   padding: 0px 10px;
+}
+
+.submit-grid p {
+  font-style: italic;
+}
+
+.submit-grid span::after {
+  content: " - ";
+}
+
+.submit-grid span {
+  font-weight: bold;
+  font-style: normal;
 }
 
 .submit a {
@@ -373,6 +403,16 @@ section {
   text-align: left;
 }
 
+.nathaniel-bio {
+  text-align: left;
+  margin: 20px 20px 20px 20px;
+}
+
+.nathaniel-bio img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .workshop-list li {
   list-style: none;
 }
@@ -411,6 +451,8 @@ section {
 .open p {
   opacity: 1 !important;
 }
+
+/* --- PEOPLE SECTION --- */
 
 .people h2 {
   margin: 0;
@@ -479,13 +521,14 @@ section {
     padding-top: 50px;
     height: 200px;
     max-height: 25vh;
-    width: auto;
+    width: 400px;
     background: none;
   }
 
   .logo {
     width: auto;
     max-height: inherit;
+    background-image: url("media/logo.png") !important;
   }
 
   footer {
@@ -548,6 +591,50 @@ section {
     border-right: none;
   }
 
+  .submit-grid {
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: 50fr 50fr;
+  }
+    
+  .submit-grid p{
+    padding: 5px 40px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .narrative {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-right: 2px solid rgba(0,0,0,.3);
+    border-bottom: 2px solid rgba(0,0,0,.3);
+  }
+  
+  .experimental {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-bottom: 2px solid rgba(0,0,0,.3);
+  }
+  
+  .documentary {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-right: 2px solid rgba(0,0,0,.3);
+  }
+  
+  .screenplay {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
   .attend h1 {
     font-size: 80px;
   }
@@ -559,6 +646,12 @@ section {
   .attend-button {
     font-size: 36px;
     width: auto;
+  }
+
+  .nathaniel-bio img {
+    width: 50%;
+    float: right;
+    margin: 20px 0px 20px 20px;
   }
 
   .day-schedule h3::after, .day-schedule h3::before {
