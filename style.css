@@ -227,7 +227,7 @@ section {
 /* --- SUBMIT SECTION --- */
 
 .submit {
-  background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
+  background: rgb(143, 92, 67);
 }
 
 .center-text {
@@ -292,7 +292,7 @@ section {
 /* --- ATTEND SECTION --- */
 
 .attend {
-  background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.jpg");
+  background:rgb(206, 177, 98);
 }
 
 .attend article {
@@ -380,7 +380,7 @@ section {
 /* --- LEARN SECTION --- */
 
 .learn {
-  background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
+  background: rgb(57, 108, 116);
 }
 
 .about-phyff p {
@@ -460,7 +460,7 @@ section {
 }
 
 .people {
-  background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.jpg");
+  background: rgb(100, 63, 78);
 }
 
 .peoplediv {
@@ -500,6 +500,22 @@ section {
 
   .attend-button {
     margin: auto 40px auto 0;
+  }
+  
+  .submit {
+    background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
+  }
+
+  .attend {
+    background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.jpg");
+  }
+
+  .learn {
+    background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
+  }
+
+  .people {
+    background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.jpg");
   }
 }
 
@@ -578,6 +594,7 @@ section {
     font-size: 20px;
   }
 
+
   .submit-button:hover,
   .attend-button:hover {
     background-color: rgba(0, 0, 0, 0.5);
@@ -635,6 +652,7 @@ section {
     grid-row-end: 3;
   }
 
+
   .attend h1 {
     font-size: 80px;
   }
@@ -647,6 +665,7 @@ section {
     font-size: 36px;
     width: auto;
   }
+
 
   .nathaniel-bio img {
     width: 50%;
@@ -665,6 +684,7 @@ section {
   .day-schedule span::before {
     content: " - ";
   }
+
 
   .peoplediv {
     flex-direction: row;
