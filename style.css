@@ -488,12 +488,6 @@ section {
   width: 300px;
 }
 
-.section {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-
 @media screen and (min-width: 700px) {
   .attend-split {
     flex-direction: row;
@@ -505,22 +499,6 @@ section {
 
   .attend-button {
     margin: auto 40px auto 0;
-  }
-  
-  .submit {
-    background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
-  }
-
-  .attend {
-    background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.jpg");
-  }
-
-  .learn {
-    background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
-  }
-
-  .people {
-    background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.jpg");
   }
 }
 
@@ -560,8 +538,29 @@ section {
     display: block;
   }
 
+  /* --- BACKGROUND IMAGES --- */
+
+  .submit {
+    background: linear-gradient(rgba(116, 77, 57, 0.8), rgba(116, 77, 57, 0.8)), url("media/submit.jpg");
+  }
+
+  .attend {
+    background: linear-gradient(rgba(206, 177, 98, 0.8), rgba(206, 177, 98, 0.8)), url("media/attend.jpg");
+  }
+
+  .learn {
+    background: linear-gradient(rgba(57, 108, 116, 0.8), rgba(57, 108, 116, 0.8)), url("media/learn.jpg");
+  }
+
+  .people {
+    background: linear-gradient(rgba(100, 63, 78, 0.8), rgba(100, 63, 78, 0.8)), url("media/more.jpg");
+  }
+
   .section {
     min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
   }
 
   .splash {
