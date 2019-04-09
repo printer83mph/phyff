@@ -243,17 +243,18 @@ section {
   padding: 0px 10px;
 }
 
-.submit-grid p {
+/* .submit-grid p {
   font-style: italic;
-}
+} */
 
-.submit-grid span::after {
+.submit-grid span::after, .submit-grid span::before {
   content: " - ";
 }
 
 .submit-grid span {
   font-weight: bold;
   font-style: normal;
+  /* font-style: italic; */
 }
 
 .submit a {
@@ -614,8 +615,7 @@ section {
 
   .submit-grid {
     display: grid;
-    grid-template-columns: 50fr 50fr;
-    grid-template-rows: 50fr 50fr;
+    grid-template-columns: repeat(2, 1fr);
   }
     
   .submit-grid p{
@@ -625,37 +625,17 @@ section {
   }
   
   .narrative {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
     border-right: 2px solid rgba(0,0,0,.3);
     border-bottom: 2px solid rgba(0,0,0,.3);
   }
   
   .experimental {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
     border-bottom: 2px solid rgba(0,0,0,.3);
   }
   
   .documentary {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
     border-right: 2px solid rgba(0,0,0,.3);
   }
-  
-  .screenplay {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
 
   .attend h1 {
     font-size: 80px;
