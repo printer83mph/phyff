@@ -233,6 +233,10 @@ section {
         margin: 0;
     }
 
+    p {
+      text-align: center;
+    }
+
     a {
         color: $text_light_full;
     }
@@ -535,10 +539,6 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.center-text {
-  text-align: center !important;
 }
 
 // RESPONSIVE SHIT -----------------------------
