@@ -21,6 +21,7 @@ $bg_submitc: rgba(116, 77, 57, 0.5);
 $bg_attendc: rgba(143, 123, 69, 0.5);
 $bg_learnc: rgba(57, 108, 116, 0.5);
 
+// BASE STUFF
 
 html {
     margin: 0;
@@ -54,60 +55,41 @@ body {
     }
 }
 
-a {
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+// GENERAL SECTION STUFF -----------------------------
+
+section {
+  position: relative;
+  min-height: calc(100vh - 120px);
 }
 
-.workshop-list {
-    li {
-        cursor: pointer;
-        list-style: none;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+.section {
+  min-height: calc(100vh - 75px);
 
-        &:before {
-            content: "+";
-            font-size: 30px;
-            padding: 0 15px;
-            float: left;
-        }
+  article {
+      min-height: inherit;
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $text_light_heavy;
+      background-color: $bg_dark_light_med;
+  }
 
-        &:nth-child(2n+1) {
-            background-color: $bg_dark_extra_light;
-        }
-    }
+  h1 {
+      font-size: 32px;
+      margin: 0;
+      padding: 20px 10px;
+  }
 
-    padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: left;
-
-    h3 {
-        margin: 0;
-        padding: 10px;
-        margin: none;
-    }
-
-    p {
-        height: 100vh;
-        max-height: 0px;
-        padding: 0 10px;
-        margin: 0;
-        overflow-y: hidden;
-        opacity: 0;
-        transition: max-height 0.5s, opacity 0.5s;
-    }
+  p {
+      margin: 0 30px;
+      padding: 10px 0 20px 0;
+      text-align: left;
+  }
 }
+
+// SPLASH PAGE -----------------------------
 
 .top {
     display: block;
@@ -137,78 +119,6 @@ a {
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-.footer {
-    margin: 0 10px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    background-color: $bg_dark_full;
-    color: $text_light_med;
-
-    a {
-        font-size: 20px;
-        text-decoration: underline;
-    }
-}
-
-section {
-    position: relative;
-    min-height: calc(100vh - 120px);
-}
-
-.back-up {
-    display: none;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    height: 50px;
-    width: 50px;
-    background-image: url("../media/up.png");
-    background-color: $bg_dark_med;
-    background-size: cover;
-    border-radius: 25px;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    z-index: 5;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.floating-back-up {
-    position: fixed;
-}
-
-.section {
-    min-height: calc(100vh - 75px);
-
-    article {
-        min-height: inherit;
-        max-width: 1000px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: $text_light_heavy;
-        background-color: $bg_dark_light_med;
-    }
-
-    h1 {
-        font-size: 32px;
-        margin: 0;
-        padding: 20px 10px;
-    }
-
-    p {
-        margin: 0 30px;
-        padding: 10px 0 20px 0;
-        text-align: left;
-    }
 }
 
 .splash {
@@ -295,6 +205,24 @@ section {
     top: -75px;
 }
 
+.footer {
+  margin: 0 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: $bg_dark_full;
+  color: $text_light_med;
+
+  a {
+      font-size: 20px;
+      text-decoration: underline;
+  }
+}
+
+// SUBMIT SECTION -----------------------------
+
 .submit {
     background: rgb(143, 92, 67);
 
@@ -323,10 +251,6 @@ section {
         flex-grow: 1;
         padding: 15px 0;
     }
-}
-
-.center-text {
-    text-align: center !important;
 }
 
 .submit-div {
@@ -359,6 +283,8 @@ section {
     margin: 20px 0 0 0;
     transition: background-color 0.2s;
 }
+
+// ATTEND SECTION -----------------------------
 
 .attend {
     background: rgb(206, 177, 98);
@@ -442,6 +368,8 @@ section {
     }
 }
 
+// LEARN SECTION -----------------------------
+
 .learn {
     background: rgb(57, 108, 116);
 }
@@ -471,6 +399,51 @@ section {
         width: 100%;
         margin-bottom: 20px;
     }
+}
+
+.workshop-list {
+  li {
+      cursor: pointer;
+      list-style: none;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      &:before {
+          content: "+";
+          font-size: 30px;
+          padding: 0 15px;
+          float: left;
+      }
+
+      &:nth-child(2n+1) {
+          background-color: $bg_dark_extra_light;
+      }
+  }
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: left;
+
+  h3 {
+      margin: 0;
+      padding: 10px;
+      margin: none;
+  }
+
+  p {
+      height: 100vh;
+      max-height: 0px;
+      padding: 0 10px;
+      margin: 0;
+      overflow-y: hidden;
+      opacity: 0;
+      transition: max-height 0.5s, opacity 0.5s;
+  }
 }
 
 .open {
@@ -517,6 +490,42 @@ section {
     align-items: center;
 }
 
+// MISC -----------------------------
+
+a {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.back-up {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  background-image: url("../media/up.png");
+  background-color: $bg_dark_med;
+  background-size: cover;
+  border-radius: 25px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 5;
+
+  &:hover {
+      opacity: 1;
+  }
+}
+
+.floating-back-up {
+  position: fixed;
+}
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -525,6 +534,12 @@ section {
     -ms-user-select: none;
     user-select: none;
 }
+
+.center-text {
+  text-align: center !important;
+}
+
+// RESPONSIVE SHIT -----------------------------
 
 @media screen and (min-width: 700px) {
     .attend-split {
