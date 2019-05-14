@@ -249,8 +249,8 @@ section {
   color: $text_light_heavy;
 
   a {
-      font-size: 20px;
-      text-decoration: underline;
+      font-size: 23px;
+      font-weight: 700;
   }
 }
 
@@ -588,16 +588,16 @@ a {
 
     .splashcol {
         h1 {
-            transition: opacity 0.2s, transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         div {
-            transition: background-color 0.2s;
+            // transition: background-color 0.2s;
         }
 
         &:hover {
             h1 {
-                transform: scale(1.05);
+                transform: scale(1.2);
                 color: $text_dark_med;
             }
 
@@ -612,12 +612,13 @@ a {
         h3 {
             top: 60%;
             color: $text_light_light;
+            transition: transform 0.2s;
         }
 
         &:hover {
             h3 {
                 color: $text_dark_med;
-                font-size: 20px;
+                transform: scale(1.1);
             }
         }
     }
