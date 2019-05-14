@@ -13,7 +13,8 @@ $text_light_light: rgba(255, 255, 255, .35);
         url('../media/fonts/din_alt_bold.woff') format('woff');
 }
 
-$title_font: "DIN Alternate", sans-serif;
+$title_font: "DIN Alternate",
+sans-serif;
 $header2_font: freight-sans-pro;
 $body_font: proxima-soft;
 
@@ -27,7 +28,7 @@ $bg_dark_extra_light: rgba(0, 0, 0, 0.2);
 $bg_light_med: rgba(255, 255, 255, 0.4);
 $bg_light_light: rgba(255, 255, 255, 0.2);
 
-$highlight: rgb(253,215,1);
+$highlight: rgb(253, 215, 1);
 
 $bg_submitc: rgb(121, 199, 239);
 $bg_submit_mobile: rgb(121, 199, 239);
@@ -82,40 +83,41 @@ body {
 // GENERAL SECTION STUFF -----------------------------
 
 section {
-  position: relative;
-  min-height: calc(100vh - 120px);
+    position: relative;
+    min-height: calc(100vh - 120px);
 }
 
 .section {
-  min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 75px);
 
-  article {
-      min-height: inherit;
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $text_light_heavy;
-      background-color: $bg_dark_light_med;
-  }
+    article {
+        min-height: inherit;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $text_light_heavy;
+        background-color: $bg_dark_light_med;
+    }
 
-  h1 {
-      font-family: "DIN Alternate Bold";
-      font-size: 32px;
-      margin: 0;
-      padding: 20px 10px;
-  }
+    h1 {
+        font-family: "DIN Alternate Bold";
+        //   font-size: 32px;
+        font-size: 60px;
+        margin: 0;
+        padding: 20px 10px;
+    }
 
-  h2 {
-      font-family: $header2_font;
-  }
+    h2 {
+        font-family: $header2_font;
+    }
 
-  p {
-      margin: 0 30px;
-      padding: 10px 0 20px 0;
-      text-align: left;
-  }
+    p {
+        margin: 0 30px;
+        padding: 10px 0 20px 0;
+        text-align: left;
+    }
 }
 
 // SPLASH PAGE -----------------------------
@@ -239,19 +241,19 @@ section {
 }
 
 .footer {
-  margin: 0 10px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  background-color: $bg_dark_full;
-  color: $text_light_heavy;
+    margin: 0 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: $bg_dark_full;
+    color: $text_light_heavy;
 
-  a {
-      font-size: 23px;
-      font-weight: 700;
-  }
+    a {
+        font-size: 23px;
+        font-weight: 700;
+    }
 }
 
 // SUBMIT SECTION -----------------------------
@@ -265,7 +267,7 @@ section {
     }
 
     p {
-      text-align: center;
+        text-align: center;
     }
 
     a {
@@ -386,7 +388,8 @@ section {
         text-align: center;
         position: relative;
 
-        &::before, &:after {
+        &::before,
+        &:after {
             content: "";
             position: absolute;
             top: 10px;
@@ -439,48 +442,48 @@ section {
 }
 
 .workshop-list {
-  li {
-      cursor: pointer;
-      list-style: none;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+    li {
+        cursor: pointer;
+        list-style: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
-      &:before {
-          content: "+";
-          font-size: 30px;
-          padding: 0 15px;
-          float: left;
-      }
+        &:before {
+            content: "+";
+            font-size: 30px;
+            padding: 0 15px;
+            float: left;
+        }
 
-      &:nth-child(2n+1) {
-          background-color: $bg_dark_extra_light;
-      }
-  }
+        &:nth-child(2n+1) {
+            background-color: $bg_dark_extra_light;
+        }
+    }
 
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-  text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left;
 
-  h3 {
-      margin: 0;
-      padding: 10px;
-      margin: none;
-  }
+    h3 {
+        margin: 0;
+        padding: 10px;
+        margin: none;
+    }
 
-  p {
-      height: 100vh;
-      max-height: 0px;
-      padding: 0 10px;
-      margin: 0;
-      overflow-y: hidden;
-      opacity: 0;
-      transition: max-height 0.5s, opacity 0.5s;
-  }
+    p {
+        height: 100vh;
+        max-height: 0px;
+        padding: 0 10px;
+        margin: 0;
+        overflow-y: hidden;
+        opacity: 0;
+        transition: max-height 0.5s, opacity 0.5s;
+    }
 }
 
 .open {
@@ -532,37 +535,37 @@ section {
 // MISC -----------------------------
 
 a {
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .back-up {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  height: 50px;
-  width: 50px;
-  background-image: url("../media/up.png");
-  background-color: $bg_dark_med;
-  background-size: cover;
-  border-radius: 25px;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  z-index: 5;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    background-image: url("../media/up.png");
+    background-color: $bg_dark_med;
+    background-size: cover;
+    border-radius: 25px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 5;
 
-  &:hover {
-      opacity: 1;
-  }
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .floating-back-up {
-  position: fixed;
+    position: fixed;
 }
 
 .noselect {
@@ -574,7 +577,7 @@ a {
     user-select: none;
 }
 
-// RESPONSIVE SHIT -----------------------------
+// TABLET MODE -----------------------------
 
 @media screen and (min-width: 800px) {
 
@@ -611,43 +614,6 @@ a {
         flex-direction: row;
     }
 
-    .splashcol {
-        h1 {
-            transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        // div {
-        //     transition: background-color 0.2s;
-        // }
-
-        &:hover {
-            h1 {
-                transform: scale(1.2);
-                color: $text_dark_med;
-            }
-
-            div {
-                // opacity: 1;
-                background-color: $highlight;
-            }
-        }
-    }
-
-    .submitc {
-        h3 {
-            top: 60%;
-            color: $text_light_light;
-            transition: transform 0.2s;
-        }
-
-        &:hover {
-            h3 {
-                color: $text_dark_med;
-                transform: scale(1.1);
-            }
-        }
-    }
-    
     .attend-split {
         flex-direction: row;
         padding: 40px 10%;
@@ -662,7 +628,50 @@ a {
     .attend-button {
         margin: auto 40px auto 0;
     }
+
+    .minus {
+        top: 0;
+    }
 }
+
+// HOVERSTATE STUFF ------------------------------
+
+@media (pointer: fine) {
+    .splashcol {
+        h1 {
+            transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        // div {
+        //     transition: background-color 0.2s;
+        // }
+
+        h3 {
+            top: 60%;
+            color: $text_light_light;
+            transition: transform 0.2s;
+        }
+
+        &:hover {
+            h1 {
+                transform: scale(1.2);
+                color: $text_dark_med;
+            }
+
+            h3 {
+                color: $text_dark_med;
+                transform: scale(1.1);
+            }
+
+            div {
+                // opacity: 1;
+                background-color: $highlight;
+            }
+        }
+    }
+}
+
+// DESKTOP MODE ------------------------------
 
 @media screen and (min-width: 1200px) {
     html {
@@ -796,9 +805,5 @@ a {
     .peoplediv {
         flex-direction: row;
         align-items: baseline;
-    }
-
-    .minus {
-        top: 0;
     }
 }
