@@ -7,7 +7,14 @@ $text_light_heavy: rgba(255, 255, 255, 0.87);
 $text_light_med: rgba(255, 255, 255, .54);
 $text_light_light: rgba(255, 255, 255, .35);
 
-$body_font: "Roboto Mono", monospace, sans-serif;
+@font-face {
+    font-family: "DIN Alternate Bold";
+    src: url('../media/fonts/Din Alternate Bold.woff2') format('woff2'),
+        url('../media/fonts/Din Alternate Bold.woff') format('woff');
+}
+
+$title_font: "DIN Alternate", sans-serif;
+$body_font: "Times New Roman", serif;
 
 $bg_dark_full: black;
 $bg_dark_heavy: rgba(0, 0, 0, .8);
@@ -89,6 +96,7 @@ section {
   }
 
   h1 {
+      font-family: "DIN Alternate Bold";
       font-size: 32px;
       margin: 0;
       padding: 20px 10px;
@@ -151,6 +159,7 @@ section {
 }
 
 .splashcol {
+
     display: flex;
     position: relative;
     flex-direction: column;
@@ -172,6 +181,7 @@ section {
 
     h1 {
         color: $text_light_full;
+        font-family: "DIN Alternate Bold";
         z-index: 1;
         width: auto;
         margin: auto;
