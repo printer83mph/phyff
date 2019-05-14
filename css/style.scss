@@ -576,7 +576,7 @@ a {
 
 // RESPONSIVE SHIT -----------------------------
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
 
     .splash {
         height: 100vh;
@@ -624,6 +624,7 @@ a {
     
     .attend-split {
         flex-direction: row;
+        padding: 40px 10%;
     }
 
     .attend {
@@ -731,11 +732,16 @@ a {
     .submit-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 50px;
 
         p {
             padding: 5px 40px;
             text-align: center;
             margin: 0;
+        }
+
+        div {
+            padding: 20px;
         }
     }
 
