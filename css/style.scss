@@ -582,6 +582,31 @@ a {
         height: 100vh;
     }
 
+    .headerspace {
+        height: 0;
+    }
+
+    .top {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        padding-top: 50px;
+        height: 200px;
+        max-height: 25vh;
+        width: 400px;
+        background: none;
+    }
+
+    .logo {
+        width: auto;
+        max-height: inherit;
+        background-image: url("../media/logo.png") !important;
+    }
+
+    footer {
+        overflow-x: auto;
+    }
+
     .colcontainer {
         flex-direction: row;
     }
@@ -591,9 +616,9 @@ a {
             transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        div {
-            // transition: background-color 0.2s;
-        }
+        // div {
+        //     transition: background-color 0.2s;
+        // }
 
         &:hover {
             h1 {
@@ -642,31 +667,6 @@ a {
 @media screen and (min-width: 1200px) {
     html {
         height: 400%;
-    }
-
-    .headerspace {
-        height: 0;
-    }
-
-    .top {
-        position: absolute;
-        left: 50%;
-        transform: translatex(-50%);
-        padding-top: 50px;
-        height: 200px;
-        max-height: 25vh;
-        width: 400px;
-        background: none;
-    }
-
-    .logo {
-        width: auto;
-        max-height: inherit;
-        background-image: url("../media/logo.png") !important;
-    }
-
-    footer {
-        overflow-x: auto;
     }
 
     .back-up {
