@@ -9,12 +9,13 @@ $text_light_light: rgba(255, 255, 255, .35);
 
 @font-face {
     font-family: "DIN Alternate Bold";
-    src: url('../media/fonts/Din Alternate Bold.woff2') format('woff2'),
-        url('../media/fonts/Din Alternate Bold.woff') format('woff');
+    src: url('../media/fonts/din_alt_bold.woff2') format('woff2'),
+        url('../media/fonts/din_alt_bold.woff') format('woff');
 }
 
 $title_font: "DIN Alternate", sans-serif;
-$body_font: "Times New Roman", serif;
+$header2_font: freight-sans-pro;
+$body_font: proxima-soft;
 
 $bg_dark_full: black;
 $bg_dark_heavy: rgba(0, 0, 0, .8);
@@ -59,6 +60,7 @@ body {
     box-sizing: border-box;
     height: auto;
     font-family: $body_font;
+    font-size: 14pt;
     color: $text_dark_med;
     background-color: $bg_dark_full;
     text-align: center;
@@ -89,7 +91,7 @@ section {
 
   article {
       min-height: inherit;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -103,6 +105,10 @@ section {
       font-size: 32px;
       margin: 0;
       padding: 20px 10px;
+  }
+
+  h2 {
+      font-family: $header2_font;
   }
 
   p {
@@ -201,6 +207,7 @@ section {
     }
 
     h3 {
+        font-family: $header2_font;
         color: $text_light_med;
         position: absolute;
         left: 0;
@@ -570,6 +577,51 @@ a {
 // RESPONSIVE SHIT -----------------------------
 
 @media screen and (min-width: 700px) {
+
+    .splash {
+        height: 100vh;
+    }
+
+    .colcontainer {
+        flex-direction: row;
+    }
+
+    .splashcol {
+        h1 {
+            transition: opacity 0.2s, transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        div {
+            transition: background-color 0.2s;
+        }
+
+        &:hover {
+            h1 {
+                transform: scale(1.05);
+                color: $text_dark_med;
+            }
+
+            div {
+                // opacity: 1;
+                background-color: $highlight;
+            }
+        }
+    }
+
+    .submitc {
+        h3 {
+            top: 60%;
+            color: $text_light_light;
+        }
+
+        &:hover {
+            h3 {
+                color: $text_dark_med;
+                font-size: 20px;
+            }
+        }
+    }
+    
     .attend-split {
         flex-direction: row;
     }
@@ -585,7 +637,7 @@ a {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     html {
         height: 400%;
     }
@@ -661,50 +713,6 @@ a {
         background-size: cover;
     }
 
-    .splash {
-        height: 100vh;
-    }
-
-    .colcontainer {
-        flex-direction: row;
-    }
-
-    .splashcol {
-        h1 {
-            transition: opacity 0.2s, transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        div {
-            transition: background-color 0.2s;
-        }
-
-        &:hover {
-            h1 {
-                transform: scale(1.05);
-                color: $text_dark_med;
-            }
-
-            div {
-                // opacity: 1;
-                background-color: $highlight;
-            }
-        }
-    }
-
-    .submitc {
-        h3 {
-            top: 60%;
-            color: $text_light_light;
-        }
-
-        &:hover {
-            h3 {
-                color: $text_dark_med;
-                font-size: 20px;
-            }
-        }
-    }
-
     .submit-button {
         &:hover {
             background-color: $bg_dark_med;
@@ -732,16 +740,16 @@ a {
     }
 
     .narrative {
-        border-right: 2px solid rgba(0, 0, 0, .3);
-        border-bottom: 2px solid rgba(0, 0, 0, .3);
+        border-right: 2px solid $bg_light_med;
+        border-bottom: 2px solid $bg_light_med;
     }
 
     .experimental {
-        border-bottom: 2px solid rgba(0, 0, 0, .3);
+        border-bottom: 2px solid $bg_light_med;
     }
 
     .documentary {
-        border-right: 2px solid rgba(0, 0, 0, .3);
+        border-right: 2px solid $bg_light_med;
     }
 
     .attend-split {
