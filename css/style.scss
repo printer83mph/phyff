@@ -40,8 +40,8 @@ $bg_learnc: rgba(56, 110, 160, 0.8);
 $bg_learn_mobile: rgb(56, 110, 160);
 $bg_learn_desktop: rgba(56, 110, 160, 0.8);
 
-$bg_people_mobile: rgb(0, 0, 0);
-$bg_people_desktop: rgba(0, 0, 0, 0.8);
+$bg_people_mobile: rgb(34, 33, 58);
+$bg_people_desktop: rgba(34, 33, 58, 0.8);
 
 // BASE STUFF -----------------------------
 
@@ -183,7 +183,7 @@ section {
     }
 
     h1 {
-        color: $highlight;
+        color: $text_light_heavy;
         font-family: "DIN Alternate Bold";
         z-index: 1;
         width: auto;
