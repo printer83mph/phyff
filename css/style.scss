@@ -26,19 +26,22 @@ $bg_dark_extra_light: rgba(0, 0, 0, 0.2);
 $bg_light_med: rgba(255, 255, 255, 0.4);
 $bg_light_light: rgba(255, 255, 255, 0.2);
 
-$bg_submitc: rgba(116, 77, 57, 0.5);
-$bg_submit_mobile: rgb(143, 92, 67);
-$bg_submit_desktop: rgba(116, 77, 57, 0.8);
+$highlight: rgb(253,215,1);
 
-$bg_attendc: rgba(143, 123, 69, 0.5);
-$bg_attend_mobile: rgb(206, 177, 98);
-$bg_attend_desktop: rgba(206, 177, 98, 0.8);
+$bg_submitc: rgba(121, 199, 239, 0.8);
+$bg_submit_mobile: rgb(121, 199, 239);
+$bg_submit_desktop: rgba(121, 199, 239, 0.8);
 
-$bg_learnc: rgba(57, 108, 116, 0.5);
-$bg_learn_mobile: rgb(57, 108, 116);
-$bg_learn_desktop: rgba(57, 108, 116, 0.8);
+$bg_attendc: rgba(67, 158, 216, 0.8);
+$bg_attend_mobile: rgb(67, 158, 216);
+$bg_attend_desktop: rgba(67, 158, 216, 0.8);
 
-$bg_people_desktop: rgba(100, 63, 78, 0.8);
+$bg_learnc: rgba(56, 110, 160, 0.8);
+$bg_learn_mobile: rgb(56, 110, 160);
+$bg_learn_desktop: rgba(56, 110, 160, 0.8);
+
+$bg_people_mobile: rgb(0, 0, 0);
+$bg_people_desktop: rgba(0, 0, 0, 0.8);
 
 // BASE STUFF -----------------------------
 
@@ -180,7 +183,7 @@ section {
     }
 
     h1 {
-        color: $text_light_full;
+        color: $highlight;
         font-family: "DIN Alternate Bold";
         z-index: 1;
         width: auto;
@@ -235,7 +238,7 @@ section {
   text-align: center;
   justify-content: center;
   background-color: $bg_dark_full;
-  color: $text_light_med;
+  color: $text_light_heavy;
 
   a {
       font-size: 20px;
@@ -482,13 +485,15 @@ section {
     }
 }
 
+// PEOPLE SECTION ------------------------------
+
 .people {
     h2 {
         margin: 0;
         padding: 20px 0;
     }
 
-    background: rgb(100, 63, 78);
+    background: $bg_people_mobile;
 
     figure {
         margin: 0 auto;
