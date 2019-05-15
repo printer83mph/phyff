@@ -46,6 +46,9 @@ $bg_peoplec: rgb(62, 74, 139);
 $bg_people_mobile: linear-gradient(rgb(39, 44, 73), rgb(62, 74, 139));
 $bg_people_desktop: rgba(62, 74, 139, .6);
 
+$topbar_min: 75px;
+$topbar_max: 120px;
+
 // BASE STUFF -----------------------------
 
 html {
@@ -85,11 +88,10 @@ body {
 
 section {
     position: relative;
-    min-height: calc(100vh - 120px);
 }
 
 .section {
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - #{$topbar_min});
 
     // background-size: auto 30px;
     background-repeat: no-repeat;
@@ -159,10 +161,11 @@ section {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    min-height: calc(100vh - #{$topbar_max});
 }
 
 .headerspace {
-    height: 120px;
+    height: $topbar_max;
 }
 
 .colcontainer {
@@ -240,7 +243,7 @@ section {
 
 .minus {
     position: relative;
-    top: -75px;
+    top: -$topbar_min;
 }
 
 .footer {
