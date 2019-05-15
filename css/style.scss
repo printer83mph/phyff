@@ -31,19 +31,20 @@ $bg_light_light: rgba(255, 255, 255, 0.2);
 $highlight: rgb(253, 215, 1);
 
 $bg_submitc: rgb(121, 199, 239);
-$bg_submit_mobile: rgb(121, 199, 239);
+$bg_submit_mobile: linear-gradient(rgb(66, 107, 128), rgb(121, 199, 239));
 $bg_submit_desktop: rgba(121, 199, 239, .6);
 
 $bg_attendc: rgb(67, 158, 216);
-$bg_attend_mobile: rgb(67, 158, 216);
+$bg_attend_mobile: linear-gradient(rgb(43, 99, 134), rgb(67, 158, 216));
 $bg_attend_desktop: rgba(67, 158, 216, .6);
 
 $bg_learnc: rgb(56, 110, 160);
-$bg_learn_mobile: rgb(56, 110, 160);
+$bg_learn_mobile: linear-gradient(rgb(37, 73, 107), rgb(56, 110, 160));
 $bg_learn_desktop: rgba(56, 110, 160, .6);
 
-$bg_people_mobile: rgb(34, 33, 58);
-$bg_people_desktop: rgba(34, 33, 58, .6);
+$bg_peoplec: rgb(62, 74, 139);
+$bg_people_mobile: linear-gradient(rgb(39, 44, 73), rgb(62, 74, 139));
+$bg_people_desktop: rgba(62, 74, 139, .6);
 
 // BASE STUFF -----------------------------
 
@@ -90,6 +91,9 @@ section {
 .section {
     min-height: calc(100vh - 75px);
 
+    // background-size: auto 30px;
+    background-repeat: no-repeat;
+
     article {
         min-height: inherit;
         max-width: 1200px;
@@ -103,8 +107,7 @@ section {
 
     h1 {
         font-family: "DIN Alternate Bold";
-        //   font-size: 32px;
-        font-size: 60px;
+        font-size: 45px;
         margin: 0;
         padding: 20px 10px;
     }
@@ -259,12 +262,8 @@ section {
 // SUBMIT SECTION -----------------------------
 
 .submit {
-    background: $bg_submit_mobile;
 
-    h1 {
-        font-size: 60px;
-        margin: 0;
-    }
+    background-image: $bg_submit_mobile;
 
     p {
         text-align: center;
@@ -314,6 +313,7 @@ section {
 .submit-button {
     display: inline-block;
     color: $text_light_full;
+    font-family: $header2_font;
     text-decoration: none;
     font-size: 50px;
     background-color: $bg_dark_light;
@@ -326,7 +326,7 @@ section {
 // ATTEND SECTION -----------------------------
 
 .attend {
-    background: $bg_attend_mobile;
+    background-image: $bg_attend_mobile;
 
     article {
         justify-content: initial;
@@ -348,6 +348,7 @@ section {
 
     h2 {
         margin-bottom: 0;
+        font-family: $header2_font;
     }
 
     h1 {
@@ -364,8 +365,9 @@ section {
     color: $text_light_full;
     background-color: $bg_dark_light;
     text-decoration: none;
+    font-family: $header2_font;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .day-schedule {
@@ -411,7 +413,7 @@ section {
 // LEARN SECTION -----------------------------
 
 .learn {
-    background: $bg_learn_mobile;
+    background-image: $bg_learn_mobile;
 }
 
 .about-phyff {
@@ -499,12 +501,13 @@ section {
 // PEOPLE SECTION ------------------------------
 
 .people {
+
+    background-image: $bg_people_mobile;
+
     h2 {
         margin: 0;
         padding: 20px 0;
     }
-
-    background: $bg_people_mobile;
 
     figure {
         margin: 0 auto;
@@ -614,19 +617,28 @@ a {
         flex-direction: row;
     }
 
-    .attend-split {
-        flex-direction: row;
-        padding: 40px 10%;
-    }
-
-    .attend {
+    .section {
         h1 {
-            font-size: 70px;
+            font-size: 60px;
         }
     }
 
+    // ATTEND SECTION HEADER
+
+    .attend-split {
+        flex-direction: row;
+        padding: 40px 40px;
+        margin: auto;
+        width: 730px;
+
+        h1 {
+            font-size: 70px;
+        }
+
+    }
+
     .attend-button {
-        margin: auto 40px auto 0;
+        margin: auto 0;
     }
 
     .minus {
@@ -669,6 +681,19 @@ a {
             }
         }
     }
+
+    .submit-button {
+        &:hover {
+            background-color: $bg_dark_med;
+        }
+    }
+
+    .attend-button {
+        &:hover {
+            background-color: $bg_dark_med;
+        }
+    }
+
 }
 
 // DESKTOP MODE ------------------------------
@@ -683,7 +708,7 @@ a {
     }
 
     .submit {
-        background: linear-gradient($bg_submit_desktop, $bg_submit_desktop), url("../media/submit_bg.jpg");
+        background: linear-gradient($bg_dark_light, $bg_submit_desktop, $bg_dark_light), url("../media/submit_bg.jpg");
 
         li {
             border-right: 2px dotted rgba(255, 255, 255, 0.5);
@@ -695,7 +720,7 @@ a {
     }
 
     .attend {
-        background: linear-gradient($bg_attend_desktop, $bg_attend_desktop), url("../media/attend_bg.jpg");
+        background: linear-gradient($bg_dark_light, $bg_attend_desktop, $bg_dark_light), url("../media/attend_bg.jpg");
 
         h1 {
             font-size: 80px;
@@ -703,11 +728,11 @@ a {
     }
 
     .learn {
-        background: linear-gradient($bg_learn_desktop, $bg_learn_desktop), url("../media/learn_bg.jpg");
+        background: linear-gradient($bg_dark_light, $bg_learn_desktop, $bg_dark_light), url("../media/learn_bg.jpg");
     }
 
     .people {
-        background: linear-gradient($bg_people_desktop, $bg_people_desktop), url("../media/more_bg.jpg");
+        background: linear-gradient($bg_dark_light, $bg_people_desktop, $bg_dark_light), url("../media/more_bg.jpg");
 
         figure {
             border: none;
@@ -722,21 +747,6 @@ a {
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
-    }
-
-    .submit-button {
-        &:hover {
-            background-color: $bg_dark_med;
-        }
-    }
-
-    .attend-button {
-        &:hover {
-            background-color: $bg_dark_med;
-        }
-
-        font-size: 36px;
-        width: auto;
     }
 
     .submit-grid {
