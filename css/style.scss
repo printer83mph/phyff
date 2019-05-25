@@ -13,7 +13,7 @@ $text_light_light: rgba(255, 255, 255, .35);
         url('../media/fonts/din_alt_bold.woff') format('woff');
 }
 
-$title_font: "DIN Alternate",
+$title_font: "DIN Alternate Bold",
 sans-serif;
 $header2_font: freight-sans-pro;
 $body_font: proxima-soft;
@@ -599,16 +599,30 @@ a {
         position: absolute;
         left: 50%;
         transform: translatex(-50%);
-        padding-top: 50px;
-        height: 200px;
-        max-height: 25vh;
-        width: 400px;
+        padding: 0;
+        margin-top: 8vh;
         background: none;
+
+        height: 11vh;
+        min-height: 110px;
+        max-height: 165px;
+
+        width: 30vh;
+        min-width: 300px;
+        max-width: 450px;
+
+        h3 {
+            display: block;
+            color: white;
+            font-family: $title_font;
+            font-size: 4vh;
+            margin: 20px 0;
+        }
     }
 
     .logo {
         width: auto;
-        max-height: inherit;
+        height: inherit;
         background-image: url("../media/logo.png") !important;
     }
 
