@@ -30,17 +30,17 @@ $bg_light_light: rgba(255, 255, 255, 0.2);
 
 $highlight: rgb(253, 215, 1);
 
-$bg_submitc: rgb(121, 199, 239);
-$bg_submit_mobile: linear-gradient(rgb(66, 107, 128), rgb(121, 199, 239));
-$bg_submit_desktop: rgba(121, 199, 239, .6);
+$bg_submitc: rgb(117, 73, 97);
+$bg_submit_mobile: linear-gradient(rgb(87, 59, 74), rgb(117, 73, 97));
+$bg_submit_desktop: rgba(117, 73, 97, .6);
 
-$bg_attendc: rgb(67, 158, 216);
-$bg_attend_mobile: linear-gradient(rgb(43, 99, 134), rgb(67, 158, 216));
-$bg_attend_desktop: rgba(67, 158, 216, .6);
+$bg_attendc: rgb(91, 85, 141);
+$bg_attend_mobile: linear-gradient(rgb(61, 58, 88), rgb(91, 85, 141));
+$bg_attend_desktop: rgba(91, 85, 141, .6);
 
-$bg_learnc: rgb(56, 110, 160);
-$bg_learn_mobile: linear-gradient(rgb(37, 73, 107), rgb(56, 110, 160));
-$bg_learn_desktop: rgba(56, 110, 160, .6);
+$bg_learnc: rgb(47, 72, 112);
+$bg_learn_mobile: linear-gradient(rgb(30, 48, 65), rgb(47, 72, 112));
+$bg_learn_desktop: rgba(47, 72, 112, .6);
 
 $bg_peoplec: rgb(62, 74, 139);
 $bg_people_mobile: linear-gradient(rgb(39, 44, 73), rgb(62, 74, 139));
@@ -670,17 +670,17 @@ a {
         &:hover {
             h1 {
                 transform: scale(1.2);
-                color: $text_dark_med;
+                // color: $text_dark_med;
             }
 
             h3 {
-                color: $text_dark_med;
+                // color: $text_dark_med;
                 transform: scale(1.1);
             }
 
             div {
                 // opacity: 1;
-                background-color: $highlight;
+                opacity: .8;
             }
         }
     }
