@@ -137,6 +137,10 @@ section {
     height: 100px;
     background-color: $bg_dark_heavy;
     transition: height .2s;
+
+    h3 {
+        display: none;
+    }
 }
 
 .small {
