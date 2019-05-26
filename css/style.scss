@@ -277,52 +277,42 @@ section {
     }
 
     ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        margin: 0 auto;
         padding: 0;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        background-color: $bg_dark_light;
+        // background-color: $bg_dark_light;
     }
 
     li {
         list-style: none;
         flex-grow: 1;
-        padding: 15px 0;
+        padding: 15px;
     }
 }
 
-.submit-div {
-    padding: 0px 10px;
-}
-
-.prev-winners {
-    span {
-        &::after {
-            content: " - ";
-        }
-
-        &::before {
-            content: " - ";
-        }
-
-        font-weight: bold;
-        font-style: normal;
-    }
-}
+// .submit-div {
+//     padding: 0px 10px;
+// }
 
 .submit-button {
-    display: inline-block;
+    // display: inline-block;
     color: $text_light_full;
     font-family: $header2_font;
     text-decoration: none;
     font-size: 50px;
+
     background-color: $bg_dark_light;
-    border-radius: 30px;
+
+    max-width: 400px;
     padding: 30px 70px;
-    margin: 20px 0 0 0;
+    margin: 20px auto;
+
+    border-width: 0;
+    border-radius: 30px;
+
     transition: background-color 0.2s;
 }
 
@@ -429,6 +419,21 @@ section {
         &:last-child {
             border-bottom: none;
         }
+    }
+}
+
+.prev-winners {
+    span {
+        &::after {
+            content: " - ";
+        }
+
+        &::before {
+            content: " - ";
+        }
+
+        font-weight: bold;
+        font-style: normal;
     }
 }
 
@@ -641,6 +646,18 @@ a {
         }
     }
 
+    .submit {
+
+        ul {
+            display: block;
+            
+            li {
+                display: inline-block;
+            }
+        }
+
+    }
+
     // ATTEND SECTION HEADER
 
     .attend-split {
@@ -650,7 +667,7 @@ a {
         width: 730px;
 
         h1 {
-            font-size: 70px;
+            font-size: 70px !important;
         }
 
     }
@@ -717,9 +734,6 @@ a {
 // DESKTOP MODE ------------------------------
 
 @media screen and (min-width: 1200px) {
-    html {
-        height: 400%;
-    }
 
     .back-up {
         display: block;
@@ -727,6 +741,11 @@ a {
 
     .submit {
         background: linear-gradient($bg_submit_desktop, $bg_submit_desktop), url("../media/submit_bg.jpg");
+    }
+
+    .submit-button {
+        // max-width: 650px;
+        font-size: 80px;
     }
 
     .attend {
@@ -757,6 +776,10 @@ a {
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
+
+        h1 {
+            font-size: 90px;
+        }
     }
 
     .prev-winners {
