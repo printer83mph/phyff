@@ -218,15 +218,16 @@ section {
         background-color: $bg_submitc;
     }
 
-    h3 {
-        font-family: $header2_font;
-        color: $text_light_med;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 70%;
-    }
+    // USE THIS WHEN WE CLOSE SUBMISSIONS
+    // h3 {
+    //     font-family: $header2_font;
+    //     color: $text_light_med;
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     margin: auto;
+    //     top: 70%;
+    // }
 }
 
 .attendc {
@@ -303,10 +304,11 @@ section {
     font-family: $header2_font;
     text-decoration: none;
     font-size: 50px;
+    font-weight: 700;
 
     background-color: $bg_dark_light;
 
-    max-width: 400px;
+    max-width: 600px;
     padding: 30px 70px;
     margin: 20px auto;
 
@@ -351,16 +353,20 @@ section {
 }
 
 .attend-button {
-    transition: background-color 0.2s;
     border-radius: 30px;
     display: inline-block;
+    max-width: 350px;
     padding: 40px;
+
     color: $text_light_full;
     background-color: $bg_dark_light;
+    
     text-decoration: none;
     font-family: $title_font;
     text-align: center;
     font-size: 40px;
+    
+    transition: background-color 0.2s;
 }
 
 .day-schedule {

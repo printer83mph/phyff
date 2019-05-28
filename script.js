@@ -1,9 +1,8 @@
 (function () {
-    var backUp, topBtn;
 
     window.onload = function () {
-        backUp = document.getElementById("back-up");
-        topBtn = document.getElementById("top");
+        var backUp = document.getElementById("back-up");
+        var topBtn = document.getElementById("top");
 
         document.addEventListener("scroll", function () {
             if (window.scrollY > window.innerHeight) {
@@ -19,15 +18,17 @@
             }
         });
 
-        var els = document.getElementById("workshop-list").childNodes;
+        // ENABLE WHEN WE ADD THE WORKSHOP LIST BACK IN
 
-        for (let i = 0; i < els.length; i++) {
-            els[i].addEventListener("click", function () {
-                var text = this.childNodes[3];
-                text.style.maxHeight = (text.style.maxHeight ? null : text.scrollHeight + 10 + "px");
-                this.classList.toggle("open");
-            });
-        }
+        // var els = document.getElementById("workshop-list").childNodes;
+
+        // for (let i = 0; i < els.length; i++) {
+        //     els[i].addEventListener("click", function () {
+        //         var text = this.childNodes[3];
+        //         text.style.maxHeight = (text.style.maxHeight ? null : text.scrollHeight + 10 + "px");
+        //         this.classList.toggle("open");
+        //     });
+        // }
 
     }
 })();
