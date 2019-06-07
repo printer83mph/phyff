@@ -7,7 +7,16 @@ $text_light_heavy: rgba(255, 255, 255, 0.87);
 $text_light_med: rgba(255, 255, 255, .54);
 $text_light_light: rgba(255, 255, 255, .35);
 
-$body_font: "Roboto Mono", monospace, sans-serif;
+@font-face {
+    font-family: "DIN Alternate Bold";
+    src: url('../media/fonts/din_alt_bold.woff2') format('woff2'),
+        url('../media/fonts/din_alt_bold.woff') format('woff');
+}
+
+$title_font: "DIN Alternate Bold",
+sans-serif;
+$header2_font: freight-sans-pro;
+$body_font: proxima-soft;
 
 $bg_dark_full: black;
 $bg_dark_heavy: rgba(0, 0, 0, .8);
@@ -19,19 +28,26 @@ $bg_dark_extra_light: rgba(0, 0, 0, 0.2);
 $bg_light_med: rgba(255, 255, 255, 0.4);
 $bg_light_light: rgba(255, 255, 255, 0.2);
 
-$bg_submitc: rgba(116, 77, 57, 0.5);
-$bg_submit_mobile: rgb(143, 92, 67);
-$bg_submit_desktop: rgba(116, 77, 57, 0.8);
+$highlight: rgb(253, 215, 1);
 
-$bg_attendc: rgba(143, 123, 69, 0.5);
-$bg_attend_mobile: rgb(206, 177, 98);
-$bg_attend_desktop: rgba(206, 177, 98, 0.8);
+$bg_submitc: rgb(117, 73, 97);
+$bg_submit_mobile: linear-gradient(rgb(87, 59, 74), rgb(117, 73, 97));
+$bg_submit_desktop: rgba(117, 73, 97, .6);
 
-$bg_learnc: rgba(57, 108, 116, 0.5);
-$bg_learn_mobile: rgb(57, 108, 116);
-$bg_learn_desktop: rgba(57, 108, 116, 0.8);
+$bg_attendc: rgb(91, 85, 141);
+$bg_attend_mobile: linear-gradient(rgb(61, 58, 88), rgb(91, 85, 141));
+$bg_attend_desktop: rgba(91, 85, 141, .6);
 
-$bg_people_desktop: rgba(100, 63, 78, 0.8);
+$bg_learnc: rgb(47, 72, 112);
+$bg_learn_mobile: linear-gradient(rgb(30, 48, 65), rgb(47, 72, 112));
+$bg_learn_desktop: rgba(47, 72, 112, .6);
+
+$bg_peoplec: rgb(62, 74, 139);
+$bg_people_mobile: linear-gradient(rgb(39, 44, 73), rgb(62, 74, 139));
+$bg_people_desktop: rgba(62, 74, 139, .6);
+
+$topbar_min: 75px;
+$topbar_max: 120px;
 
 // BASE STUFF -----------------------------
 
@@ -49,6 +65,7 @@ body {
     box-sizing: border-box;
     height: auto;
     font-family: $body_font;
+    font-size: 14pt;
     color: $text_dark_med;
     background-color: $bg_dark_full;
     text-align: center;
@@ -70,35 +87,42 @@ body {
 // GENERAL SECTION STUFF -----------------------------
 
 section {
-  position: relative;
-  min-height: calc(100vh - 120px);
+    position: relative;
 }
 
 .section {
-  min-height: calc(100vh - 75px);
+    min-height: calc(100vh - #{$topbar_min});
 
-  article {
-      min-height: inherit;
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $text_light_heavy;
-      background-color: $bg_dark_light_med;
-  }
+    // background-size: auto 30px;
+    background-repeat: no-repeat;
 
-  h1 {
-      font-size: 32px;
-      margin: 0;
-      padding: 20px 10px;
-  }
+    article {
+        min-height: inherit;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $text_light_heavy;
+        background-color: $bg_dark_light_med;
+    }
 
-  p {
-      margin: 0 30px;
-      padding: 10px 0 20px 0;
-      text-align: left;
-  }
+    h1 {
+        font-family: "DIN Alternate Bold";
+        font-size: 45px;
+        margin: 0;
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-family: $header2_font;
+    }
+
+    p {
+        margin: 0 30px;
+        padding: 10px 0 20px 0;
+        text-align: left;
+    }
 }
 
 // SPLASH PAGE -----------------------------
@@ -113,6 +137,10 @@ section {
     height: 100px;
     background-color: $bg_dark_heavy;
     transition: height .2s;
+
+    h3 {
+        display: none;
+    }
 }
 
 .small {
@@ -137,10 +165,11 @@ section {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    min-height: calc(100vh - #{$topbar_max});
 }
 
 .headerspace {
-    height: 120px;
+    height: $topbar_max;
 }
 
 .colcontainer {
@@ -151,6 +180,7 @@ section {
 }
 
 .splashcol {
+
     display: flex;
     position: relative;
     flex-direction: column;
@@ -168,10 +198,12 @@ section {
         bottom: 0;
         left: 0;
         right: 0;
+        opacity: 0.7;
     }
 
     h1 {
-        color: $text_light_full;
+        color: $text_light_heavy;
+        font-family: "DIN Alternate Bold";
         z-index: 1;
         width: auto;
         margin: auto;
@@ -186,14 +218,16 @@ section {
         background-color: $bg_submitc;
     }
 
-    h3 {
-        color: $text_light_med;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 70%;
-    }
+    // USE THIS WHEN WE CLOSE SUBMISSIONS
+    // h3 {
+    //     font-family: $header2_font;
+    //     color: $text_light_med;
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     margin: auto;
+    //     top: 70%;
+    // }
 }
 
 .attendc {
@@ -214,96 +248,80 @@ section {
 
 .minus {
     position: relative;
-    top: -75px;
+    top: -$topbar_min;
 }
 
 .footer {
-  margin: 0 10px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  background-color: $bg_dark_full;
-  color: $text_light_med;
+    margin: 0 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: $bg_dark_full;
+    color: $text_light_heavy;
 
-  a {
-      font-size: 20px;
-      text-decoration: underline;
-  }
+    a {
+        font-size: 23px;
+        font-weight: 700;
+    }
 }
 
 // SUBMIT SECTION -----------------------------
 
 .submit {
-    background: $bg_submit_mobile;
 
-    h1 {
-        font-size: 60px;
-        margin: 0;
-    }
+    background-image: $bg_submit_mobile;
 
     p {
-      text-align: center;
-    }
-
-    a {
-        color: $text_light_full;
+        text-align: center;
     }
 
     ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        margin: 0 auto;
         padding: 0;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        background-color: $bg_dark_light;
+        // background-color: $bg_dark_light;
     }
 
     li {
         list-style: none;
         flex-grow: 1;
-        padding: 15px 0;
+        padding: 15px;
     }
 }
 
-.submit-div {
-    padding: 0px 10px;
-}
-
-.submit-grid {
-    span {
-        &::after {
-            content: " - ";
-        }
-
-        &::before {
-            content: " - ";
-        }
-
-        font-weight: bold;
-        font-style: normal;
-    }
-}
+// .submit-div {
+//     padding: 0px 10px;
+// }
 
 .submit-button {
-    display: inline-block;
+    // display: inline-block;
     color: $text_light_full;
+    font-family: $header2_font;
     text-decoration: none;
     font-size: 50px;
+    font-weight: 700;
+
     background-color: $bg_dark_light;
-    border-radius: 30px;
+
+    max-width: 600px;
     padding: 30px 70px;
-    margin: 20px 0 0 0;
+    margin: 20px auto;
+
+    border-width: 0;
+    border-radius: 30px;
+
     transition: background-color 0.2s;
 }
 
 // ATTEND SECTION -----------------------------
 
 .attend {
-    background: $bg_attend_mobile;
+    background-image: $bg_attend_mobile;
 
     article {
         justify-content: initial;
@@ -325,6 +343,7 @@ section {
 
     h2 {
         margin-bottom: 0;
+        font-family: $header2_font;
     }
 
     h1 {
@@ -334,15 +353,20 @@ section {
 }
 
 .attend-button {
-    transition: background-color 0.2s;
     border-radius: 30px;
     display: inline-block;
+    max-width: 350px;
     padding: 40px;
+
     color: $text_light_full;
     background-color: $bg_dark_light;
+    
     text-decoration: none;
+    font-family: $title_font;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
+    
+    transition: background-color 0.2s;
 }
 
 .day-schedule {
@@ -365,7 +389,8 @@ section {
         text-align: center;
         position: relative;
 
-        &::before, &:after {
+        &::before,
+        &:after {
             content: "";
             position: absolute;
             top: 10px;
@@ -387,7 +412,7 @@ section {
 // LEARN SECTION -----------------------------
 
 .learn {
-    background: $bg_learn_mobile;
+    background-image: $bg_learn_mobile;
 }
 
 .about-phyff {
@@ -400,6 +425,21 @@ section {
         &:last-child {
             border-bottom: none;
         }
+    }
+}
+
+.prev-winners {
+    span {
+        &::after {
+            content: " - ";
+        }
+
+        &::before {
+            content: " - ";
+        }
+
+        font-weight: bold;
+        font-style: normal;
     }
 }
 
@@ -418,48 +458,48 @@ section {
 }
 
 .workshop-list {
-  li {
-      cursor: pointer;
-      list-style: none;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+    li {
+        cursor: pointer;
+        list-style: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
-      &:before {
-          content: "+";
-          font-size: 30px;
-          padding: 0 15px;
-          float: left;
-      }
+        &:before {
+            content: "+";
+            font-size: 30px;
+            padding: 0 15px;
+            float: left;
+        }
 
-      &:nth-child(2n+1) {
-          background-color: $bg_dark_extra_light;
-      }
-  }
+        &:nth-child(2n+1) {
+            background-color: $bg_dark_extra_light;
+        }
+    }
 
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-  text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left;
 
-  h3 {
-      margin: 0;
-      padding: 10px;
-      margin: none;
-  }
+    h3 {
+        margin: 0;
+        padding: 10px;
+        margin: none;
+    }
 
-  p {
-      height: 100vh;
-      max-height: 0px;
-      padding: 0 10px;
-      margin: 0;
-      overflow-y: hidden;
-      opacity: 0;
-      transition: max-height 0.5s, opacity 0.5s;
-  }
+    p {
+        height: 100vh;
+        max-height: 0px;
+        padding: 0 10px;
+        margin: 0;
+        overflow-y: hidden;
+        opacity: 0;
+        transition: max-height 0.5s, opacity 0.5s;
+    }
 }
 
 .open {
@@ -472,13 +512,16 @@ section {
     }
 }
 
+// PEOPLE SECTION ------------------------------
+
 .people {
+
+    background-image: $bg_people_mobile;
+
     h2 {
         margin: 0;
         padding: 20px 0;
     }
-
-    background: rgb(100, 63, 78);
 
     figure {
         margin: 0 auto;
@@ -509,37 +552,38 @@ section {
 // MISC -----------------------------
 
 a {
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $text_light_heavy;
 }
 
 .back-up {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  height: 50px;
-  width: 50px;
-  background-image: url("../media/up.png");
-  background-color: $bg_dark_med;
-  background-size: cover;
-  border-radius: 25px;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  z-index: 5;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    background-image: url("../media/up.png");
+    background-color: $bg_dark_med;
+    background-size: cover;
+    border-radius: 25px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 5;
 
-  &:hover {
-      opacity: 1;
-  }
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .floating-back-up {
-  position: fixed;
+    position: fixed;
 }
 
 .noselect {
@@ -551,27 +595,12 @@ a {
     user-select: none;
 }
 
-// RESPONSIVE SHIT -----------------------------
+// TABLET MODE -----------------------------
 
-@media screen and (min-width: 700px) {
-    .attend-split {
-        flex-direction: row;
-    }
+@media screen and (min-width: 800px) {
 
-    .attend {
-        h1 {
-            font-size: 70px;
-        }
-    }
-
-    .attend-button {
-        margin: auto 40px auto 0;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    html {
-        height: 400%;
+    .splash {
+        height: 100vh;
     }
 
     .headerspace {
@@ -582,16 +611,30 @@ a {
         position: absolute;
         left: 50%;
         transform: translatex(-50%);
-        padding-top: 50px;
-        height: 200px;
-        max-height: 25vh;
-        width: 400px;
+        padding: 0;
+        margin-top: 8vh;
         background: none;
+
+        height: 11vh;
+        min-height: 110px;
+        max-height: 165px;
+
+        width: 30vh;
+        min-width: 300px;
+        max-width: 450px;
+
+        h3 {
+            display: block;
+            color: white;
+            font-family: $title_font;
+            font-size: 4vh;
+            margin: 20px 0;
+        }
     }
 
     .logo {
         width: auto;
-        max-height: inherit;
+        height: inherit;
         background-image: url("../media/logo.png") !important;
     }
 
@@ -599,91 +642,83 @@ a {
         overflow-x: auto;
     }
 
-    .back-up {
-        display: block;
-    }
-
-    .submit {
-        background: linear-gradient($bg_submit_desktop, $bg_submit_desktop), url("../media/submit.jpg");
-
-        li {
-            border-right: 2px dotted rgba(255, 255, 255, 0.5);
-
-            &:last-of-type {
-                border-right: none;
-            }
-        }
-    }
-
-    .attend {
-        background: linear-gradient($bg_attend_desktop, $bg_attend_desktop), url("../media/attend.jpg");
-
-        h1 {
-            font-size: 80px;
-        }
-    }
-
-    .learn {
-        background: linear-gradient($bg_learn_desktop, $bg_learn_desktop), url("../media/learn.jpg");
-    }
-
-    .people {
-        background: linear-gradient($bg_people_desktop, $bg_people_desktop), url("../media/more.jpg");
-
-        figure {
-            border: none;
-            padding: 0;
-            margin: 0;
-            max-width: 300px;
-        }
-    }
-
-    .section {
-        min-height: 100vh;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .splash {
-        height: 100vh;
-    }
-
     .colcontainer {
         flex-direction: row;
     }
 
-    .splashcol {
+    .section {
         h1 {
-            transition: opacity 0.2s;
+            font-size: 60px;
+        }
+    }
+
+    .submit {
+
+        ul {
+            display: block;
+            
+            li {
+                display: inline-block;
+            }
         }
 
-        div {
-            transition: opacity 0.2s;
-            opacity: 0.7;
+    }
+
+    // ATTEND SECTION HEADER
+
+    .attend-split {
+        flex-direction: row;
+        padding: 40px 40px;
+        margin: auto;
+        width: 730px;
+
+        h1 {
+            font-size: 70px !important;
+        }
+
+    }
+
+    .attend-button {
+        margin: auto 0;
+    }
+
+    .minus {
+        top: 0;
+    }
+}
+
+// HOVERSTATE STUFF ------------------------------
+
+@media (pointer: fine) {
+    .splashcol {
+        h1 {
+            transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        // div {
+        //     transition: background-color 0.2s;
+        // }
+
+        h3 {
+            top: 60%;
+            color: $text_light_light;
+            transition: transform 0.2s;
         }
 
         &:hover {
             h1 {
-                transform: scale(1.05);
+                transform: scale(1.2);
+                // color: $text_dark_med;
+            }
+
+            h3 {
+                // color: $text_dark_med;
+                transform: scale(1.1);
             }
 
             div {
-                opacity: 1;
-            }
-        }
-    }
-
-    .submitc {
-        h3 {
-            top: 60%;
-            color: $text_light_light;
-        }
-
-        &:hover {
-            h3 {
-                color: $text_light_heavy;
-                font-size: 20px;
+                // opacity: 1;
+                opacity: .8;
             }
         }
     }
@@ -698,33 +733,88 @@ a {
         &:hover {
             background-color: $bg_dark_med;
         }
-
-        font-size: 36px;
-        width: auto;
     }
 
-    .submit-grid {
+}
+
+// DESKTOP MODE ------------------------------
+
+@media screen and (min-width: 1200px) {
+
+    .back-up {
+        display: block;
+    }
+
+    .submit {
+        background: linear-gradient($bg_submit_desktop, $bg_submit_desktop), url("../media/submit_bg.jpg");
+    }
+
+    .submit-button {
+        // max-width: 650px;
+        font-size: 80px;
+    }
+
+    .attend {
+        background: linear-gradient($bg_attend_desktop, $bg_attend_desktop), url("../media/attend_bg.jpg");
+
+        h1 {
+            font-size: 80px;
+        }
+    }
+
+    .learn {
+        background: linear-gradient($bg_learn_desktop, $bg_learn_desktop), url("../media/learn_bg.jpg");
+    }
+
+    .people {
+        background: linear-gradient($bg_people_desktop, $bg_people_desktop), url("../media/more_bg.jpg");
+
+        figure {
+            border: none;
+            padding: 0;
+            margin: 0;
+            max-width: 300px;
+        }
+    }
+
+    .section {
+        min-height: 100vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+        h1 {
+            font-size: 90px;
+        }
+    }
+
+    .prev-winners {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 20px 50px;
 
         p {
             padding: 5px 40px;
             text-align: center;
             margin: 0;
         }
+
+        div {
+            padding: 20px;
+        }
     }
 
     .narrative {
-        border-right: 2px solid rgba(0, 0, 0, .3);
-        border-bottom: 2px solid rgba(0, 0, 0, .3);
+        border-right: 2px solid $bg_light_med;
+        border-bottom: 2px solid $bg_light_med;
     }
 
     .experimental {
-        border-bottom: 2px solid rgba(0, 0, 0, .3);
+        border-bottom: 2px solid $bg_light_med;
     }
 
     .documentary {
-        border-right: 2px solid rgba(0, 0, 0, .3);
+        border-right: 2px solid $bg_light_med;
     }
 
     .attend-split {
@@ -764,9 +854,5 @@ a {
     .peoplediv {
         flex-direction: row;
         align-items: baseline;
-    }
-
-    .minus {
-        top: 0;
     }
 }
