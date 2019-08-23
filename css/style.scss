@@ -28,7 +28,6 @@ $bg_dark_extra_light: rgba(0, 0, 0, 0.2);
 $bg_light_heavy: rgba(255, 255, 255, 0.7);
 $bg_light_med: rgba(255, 255, 255, 0.4);
 $bg_light_light: rgba(255, 255, 255, 0.2);
-$bg_light_extra_light: rgba(0,0,0,0.15);
 
 $highlight: rgb(253, 215, 1);
 
@@ -282,14 +281,13 @@ section {
         text-decoration: none;
         font-size: 35px;
         margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 10px;
         padding-left: 20px;
         padding-right: 20px;
         border: 2px solid $bg_light_med;
-        border-radius: 20px;
-        background-color: $bg_light_extra_light;
+        border-radius: 50px;
     }
 }
 
@@ -297,19 +295,21 @@ section {
 
     ul {
         display: grid;
-        list-style: none;
         grid-template-columns: repeat(2,1fr);
         margin: 0 auto;
-        padding: 0 10px;
-        padding-bottom: 15px;
+        padding: 0;
         flex-grow: 1;
         font-weight: bold;
         border-bottom: 2px solid $bg_light_med;
     }
 
     li {
-        padding: 10px 5px;
-        font-size: 20px;
+        padding: 15px;
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 22px;
     }
 }
 
@@ -647,20 +647,12 @@ a {
             font-size: 60px;
         }
     }
-
-    .submit {
-        a { 
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
     
     .submit-list {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
         ul {
             display: block;
             border-right: 2px solid $bg_light_med;
@@ -677,13 +669,7 @@ a {
 
         li {
             display:block;
-            padding: 15px;
             padding-right: 50px;
-            font-size: 25px;
-        }
-
-        p {
-            font-size: 20px;
         }
     }
 
