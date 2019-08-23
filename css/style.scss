@@ -25,6 +25,7 @@ $bg_dark_light_med: rgba(0, 0, 0, .3);
 $bg_dark_light: rgba(0, 0, 0, 0.3);
 $bg_dark_extra_light: rgba(0, 0, 0, 0.2);
 
+$bg_light_heavy: rgba(255, 255, 255, 0.7);
 $bg_light_med: rgba(255, 255, 255, 0.4);
 $bg_light_light: rgba(255, 255, 255, 0.2);
 
@@ -272,50 +273,44 @@ section {
 .submit {
 
     background-image: $bg_submit_mobile;
+    background-color: $bg_dark_light;
+    transition: background-color 0.2s;
 
-    p {
-        text-align: center;
-    }
-
-    ul {
-        max-width: 800px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-        margin: 0 auto;
-        padding: 0;
-        // background-color: $bg_dark_light;
-    }
-
-    li {
-        list-style: none;
-        flex-grow: 1;
-        padding: 15px;
+    a {
+        margin-top: 0;
+        text-decoration: none;
+        font-size: 35px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 2px solid $bg_light_med;
+        border-radius: 50px;
     }
 }
 
-// .submit-div {
-//     padding: 0px 10px;
-// }
+.submit-list{
 
-.submit-button {
-    // display: inline-block;
-    color: $text_light_full;
-    font-family: $header2_font;
-    text-decoration: none;
-    font-size: 50px;
-    font-weight: 700;
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 auto;
+        padding: 0;
+        flex-grow: 1;
+        font-weight: bold;
+        border-bottom: 2px solid $bg_light_med;
+    }
 
-    background-color: $bg_dark_light;
+    li {
+        padding: 15px;
+        font-size: 25px;
+    }
 
-    max-width: 600px;
-    padding: 30px 70px;
-    margin: 20px auto;
-
-    border-width: 0;
-    border-radius: 30px;
-
-    transition: background-color 0.2s;
+    p {
+        font-size: 22px;
+    }
 }
 
 // ATTEND SECTION -----------------------------
@@ -566,7 +561,7 @@ a {
     display: none;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: calc(20px + 100vh);
     height: 50px;
     width: 50px;
     background-image: url("../media/up.png");
@@ -584,6 +579,7 @@ a {
 
 .floating-back-up {
     position: fixed;
+    top: 20px;
 }
 
 .noselect {
@@ -651,17 +647,30 @@ a {
             font-size: 60px;
         }
     }
-
-    .submit {
-
+    
+    .submit-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         ul {
             display: block;
-            
-            li {
-                display: inline-block;
-            }
+            border-right: 2px solid $bg_light_med;
+            border-bottom: 0px;
+            margin-left: 70px;
+            text-align: right;
+
+        }
+        div {
+            flex-grow: 5;
+            text-align: left;
+            padding-left: 20px;
         }
 
+        li {
+            display:block;
+            padding-right: 50px;
+        }
     }
 
     // ATTEND SECTION HEADER
@@ -695,10 +704,6 @@ a {
             transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        // div {
-        //     transition: background-color 0.2s;
-        // }
-
         h3 {
             top: 60%;
             color: $text_light_light;
@@ -708,24 +713,24 @@ a {
         &:hover {
             h1 {
                 transform: scale(1.2);
-                // color: $text_dark_med;
             }
 
             h3 {
-                // color: $text_dark_med;
                 transform: scale(1.1);
             }
 
             div {
-                // opacity: 1;
                 opacity: .8;
             }
         }
     }
 
-    .submit-button {
+    .submit a {
+        transition: 0.3s;
+
         &:hover {
             background-color: $bg_dark_med;
+            border-color: rgba(0,0,0,0);
         }
     }
 
@@ -749,10 +754,10 @@ a {
         background: linear-gradient($bg_submit_desktop, $bg_submit_desktop), url("../media/submit_bg.jpg");
     }
 
-    .submit-button {
-        // max-width: 650px;
-        font-size: 80px;
-    }
+    // .submit-button {
+    //     // max-width: 650px;
+    //     font-size: 80px;
+    // }
 
     .attend {
         background: linear-gradient($bg_attend_desktop, $bg_attend_desktop), url("../media/attend_bg.jpg");
