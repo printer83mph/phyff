@@ -3,7 +3,9 @@
     "description": "Official website for the Philly Youth Film Fest",
     "private": true,
     "author": "Thomas Shaw <printer.83mph@gmail.com>",
-    "contributors": ["Will Hagele <willhagele@gmail.com>"],
+    "contributors": [
+        "Will Hagele <willhagele@gmail.com>"
+    ],
     "version": "1.0.0",
     "dependencies": {},
     "devDependencies": {
