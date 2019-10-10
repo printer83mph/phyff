@@ -1,0 +1,90 @@
+@import "../custom/globals.scss";
+
+.attend {
+    background-image: $bg_attend_mobile;
+
+    article {
+        justify-content: initial;
+    }
+}
+
+.attend-split {
+    display: flex;
+    justify-items: center;
+    text-align: left;
+    padding: 30px 40px;
+    flex-direction: column;
+
+    div {
+        flex-grow: 1;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        font-family: $header2_font;
+    }
+
+    h1 {
+        font-size: 50px;
+        padding: 0;
+    }
+}
+
+.attend-button {
+    border-radius: 30px;
+    display: inline-block;
+    max-width: 350px;
+    padding: 40px;
+
+    color: $text_light_full;
+    background-color: $bg_dark_light;
+    
+    text-decoration: none;
+    font-family: $title_font;
+    text-align: center;
+    font-size: 40px;
+    
+    transition: background-color 0.2s;
+}
+
+.day-schedule {
+    padding: 0;
+    margin: 0;
+
+    p {
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    span {
+        font-weight: normal;
+        display: block;
+    }
+
+    h3 {
+        text-align: center;
+        position: relative;
+
+        &::before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            width: 35%;
+            height: 2px;
+            background-color: $bg_light_light;
+        }
+
+        &:before {
+            left: 0px;
+        }
+
+        &::after {
+            right: 0px;
+        }
+    }
+}
