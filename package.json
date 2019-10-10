@@ -1,0 +1,20 @@
+{
+    "name": "phyff",
+    "description": "Official website for the Philly Youth Film Fest",
+    "private": true,
+    "author": "Thomas Shaw <printer.83mph@gmail.com>",
+    "contributors": ["Will Hagele <willhagele@gmail.com>"],
+    "version": "1.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "gh-pages": "^2.1.1",
+        "nodemon": "^1.19.3",
+        "sass": "^1.23.0"
+    },
+    "scripts": {
+        "compile": "node bin/compile.js",
+        "compileDev": "node bin/compileDev.js",
+        "watch": "nodemon -e scss -x \"npm run compileDev\" ",
+        "publish": "node bin/compile.js && node bin/publish.js"
+    }
+}
