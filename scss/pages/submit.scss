@@ -20,6 +20,10 @@
         border-radius: 20px;
         background-color: $bg_light_extra_light;
     }
+
+    h3 {
+        margin-top: 15px;
+    }
 }
 
 .submit-list{
@@ -39,5 +43,9 @@
     li {
         padding: 10px 5px;
         font-size: 20px;
+    }
+
+    div {
+        padding-top: 15px;
     }
 }

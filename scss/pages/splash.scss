@@ -92,15 +92,15 @@
     }
 
     // USE THIS WHEN WE CLOSE SUBMISSIONS
-    // h3 {
-    //     font-family: $header2_font;
-    //     color: $text_light_med;
-    //     position: absolute;
-    //     left: 0;
-    //     right: 0;
-    //     margin: auto;
-    //     top: 70%;
-    // }
+    h3 {
+        font-family: $body_font;
+        color: $text_light_med;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 70%;
+    }
 }
 
 .attendc {
