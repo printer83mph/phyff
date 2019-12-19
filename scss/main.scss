@@ -151,58 +151,61 @@ section {
         }
     }
     
-    .submit-list {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    // .submit-list {
+    //     display: flex;
+    //     flex-direction: row;
+    //     align-items: center;
+    //     justify-content: center;
 
-        ul {
-            display: block;
-            border-right: 2px solid $bg_light_med;
-            border-bottom: 0px;
-            margin-left: 70px;
-            text-align: right;
+    //     ul {
+    //         display: block;
+    //         border-right: 2px solid $bg_light_med;
+    //         border-bottom: 0px;
+    //         margin-left: 70px;
+    //         text-align: right;
 
-        }
-        div {
-            flex-grow: 5;
-            text-align: left;
-            padding-left: 20px;
-        }
+    //     }
+    //     div {
+    //         flex-grow: 5;
+    //         text-align: left;
+    //         padding-left: 20px;
+    //     }
 
-        li {
-            display:block;
-            padding: 15px;
-            padding-right: 50px;
-            font-size: 25px;
-        }
+    //     li {
+    //         display:block;
+    //         padding: 15px;
+    //         padding-right: 50px;
+    //         font-size: 25px;
+    //     }
 
-        p {
-            font-size: 20px;
-        }
-    }
+    //     p {
+    //         font-size: 20px;
+    //     }
+    // }
 
     // ATTEND SECTION HEADER
 
-    .attend-split {
+    .attend-grid {
         flex-direction: row;
         padding: 40px 40px;
         margin: auto;
         width: 730px;
-
-        h1 {
-            font-size: 70px !important;
-        }
-
-    }
-
-    .attend-button {
-        margin: auto 0;
     }
 
     .minus {
         top: 0;
+    }
+
+    h2 {
+        text-align: left;
+        margin: 0 0;
+    }
+
+    p {
+        padding: 0 0;
+        margin: 0 0;
+        margin-bottom: 30px;
+        margin-right: 25px;
     }
 }
 
@@ -245,8 +248,11 @@ section {
     }
 
     .attend-button {
+        transition: 0.3s;
         &:hover {
             background-color: $bg_dark_med;
+            border-color: rgba(0,0,0,0);
+
         }
     }
 

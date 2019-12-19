@@ -1,4 +1,5 @@
 @import "../custom/globals.scss";
+@import "../custom/breakpoints.scss";
 
 .submit {
 
@@ -26,7 +27,7 @@
     }
 }
 
-.submit-list{
+.submit-list {
 
     ul {
         display: grid;
@@ -48,4 +49,38 @@
     div {
         padding-top: 15px;
     }
+
+    @include break(800px) {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            display: block;
+            border-right: 2px solid $bg_light_med;
+            border-bottom: 0px;
+            margin-left: 70px;
+            text-align: right;
+
+        }
+
+        div {
+            flex-grow: 5;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        li {
+            display:block;
+            padding: 15px;
+            padding-right: 50px;
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }    
 }
