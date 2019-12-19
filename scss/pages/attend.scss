@@ -11,25 +11,23 @@
 
 .attend-grid {
     display: grid;
-    grid-template-columns: 1fr; // desktop 1fr 1fr
+    grid-template-columns: 1fr;
     grid-gap: 20px;
     align-items: start;
     flex-direction: row;
-    // padding: 0px; 
     margin: auto;
-    // width: 730px;
 
-    @include break(800px) {
-        grid-template-columns: 1fr 1fr;
+    @include break(1040px) {
+        grid-template-columns: 500px 500px;
         padding: 40px 40px;
     }
 
     .info {
         grid-column: 1;
-        grid-row: 2; // dekstop 1 / 3
+        grid-row: 2;
         border-bottom: 2px solid rgba(255, 255, 255, 0.4); 
 
-        @include break(800px) {
+        @include break(1040px) {
             grid-row: 1 / 3;
             border-right: 2px solid rgba(255, 255, 255, 0.4);
             border-bottom: none;
@@ -50,7 +48,6 @@
         border-radius: 30px;
         display: inline-block;
         max-width: 350px;
-        // padding: 40px;
         color: $text_light_full;
         background-color: $bg_dark_light;
         
@@ -61,7 +58,6 @@
         
         transition: background-color 0.2s;
 
-        // new code
         grid-column: 1;
         grid-row: 1;
         margin: auto auto;
@@ -73,7 +69,7 @@
             font-family: proxima-soft;
         }
 
-        @include break(800px) {
+        @include break(1040px) {
             grid-column: 2;
             grid-row: 1;
         }
@@ -96,7 +92,7 @@
             margin-top: 0;
         }
 
-        @include break(800px) {
+        @include break(1040px) {
             grid-column: 2;
             grid-row: 2;
         }
