@@ -63,6 +63,7 @@
         margin: auto auto;
         margin-top: 20px;
         border: 2px solid rgba(255, 255, 255, 0.4);
+        padding: 20px;
         
         a {
             text-decoration: none;
@@ -90,6 +91,10 @@
 
         ul {
             margin-top: 0;
+        }
+
+        b {
+            font-size: 1.2em;
         }
 
         @include break(1040px) {
