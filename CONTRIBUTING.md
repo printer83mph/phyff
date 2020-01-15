@@ -1,0 +1,26 @@
+# Contributing to the PHYFF Website
+
+* [Cloning, building, publishing](#cloning-building-and-publishing)
+* [SCSS guidelines/tips](#scss-guidelines)
+* [Styleguide](#styleguide)
+
+## Cloning, building, and publishing
+In order to allow publishing and compiling on any OS without writing some special script for each and requiring multiple different pieces of software to be installed, we've converted this repository into a [npm package](https://docs.npmjs.com/about-packages-and-modules) for your convenience.
+
+While this streamlines things in a sense, you still need [node.js](https://nodejs.org/en/) (I always recommend the LTS) installed to use this functionality.
+
+Once node is installed and this project is cloned, there's realy just one step to set stuff up (run in the repo folder):
+```sh
+npm install
+```
+Now you can use these npm scripts we've set up using `npm run <name>`:
+* `compile` compiles the SASS for production
+* `compileDev` compiles for development (with a CSS map)
+* `watch` starts a (node) daemon that runs `compileDev` when any SCSS files are changed
+* `publish` runs `compile` and publishes any changes to the `public` folder to the `gh-pages` branch
+
+## SCSS Guidelines
+*WIP*
+
+## Styleguide
+*WIP*
