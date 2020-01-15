@@ -19,6 +19,11 @@ Now you can use these npm scripts we've set up using `npm run <name>`:
 * `watch` starts a (node) daemon that runs `compileDev` when any SCSS files are changed
 * `publish` runs `compile` and publishes any changes to the `public` folder to the `gh-pages` branch
 
+## Git Guidelines
+When adding a new feature or a large amount of new content it's recommended that you make a new branch from `master`. You can then make a pull request so whoever else needs to review the changes can do so easily.
+
+If it's just a hotfix or small content change then just updating `master` should be fine. Just keep it to one commit (or multiple in quick succession) since we don't want any unfinished stuff lying around in `master`
+
 ## SCSS Guidelines
 *WIP*
 
