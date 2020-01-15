@@ -28,7 +28,9 @@ When adding a new feature or a large amount of new content it's recommended that
 If it's just a hotfix or small content change then just updating `master` should be fine. Just keep it to one commit (or multiple in quick succession) since we don't want any unfinished stuff lying around in `master`.
 
 ## SCSS Guidelines
-*WIP*
+[SCSS (Sass)](https://sass-lang.com/) is basically black magic. It's a flexible language built around modularity that can compile right into one file. If you've never used it before then [this guide](https://sass-lang.com/guide) should get you up to speed pretty quickly.
+
+Our structure looks like this:
 
 ## Style Resources
 * [PHYFF branding resources](https://github.com/phyff/resources) for all your possible styling needs
