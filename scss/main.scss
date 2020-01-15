@@ -87,6 +87,8 @@ section {
 
 @media screen and (min-width: 800px) {
 
+    // TODO: Refactor these into their own sections
+
     .splash {
         height: 100vh;
     }
@@ -212,6 +214,9 @@ section {
 // HOVERSTATE STUFF ------------------------------
 
 @media (pointer: fine) {
+
+    // TODO: Refactor these into their own sections
+
     .splashcol {
         h1 {
             transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -261,6 +266,8 @@ section {
 // DESKTOP MODE ------------------------------
 
 @media screen and (min-width: 1200px) {
+
+    // TODO: refactor these into their own sections
 
     .back-up {
         display: block;
