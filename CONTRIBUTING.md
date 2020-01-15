@@ -2,7 +2,7 @@
 
 * [Cloning, building, publishing](#cloning-building-and-publishing)
 * [SCSS guidelines/tips](#scss-guidelines)
-* [Styleguide](#styleguide)
+* [Styling resources](#style-resources)
 
 ## Cloning, building, and publishing
 In order to allow publishing and compiling on any OS without writing some special script for each and requiring multiple different pieces of software to be installed, we've converted this repository into a [npm package](https://docs.npmjs.com/about-packages-and-modules) for your convenience.
@@ -22,5 +22,7 @@ Now you can use these npm scripts we've set up using `npm run <name>`:
 ## SCSS Guidelines
 *WIP*
 
-## Styleguide
-*WIP*
+## Style Resources
+When adding to or modifying the site, please use [the PHYFF styleguide](https://github.com/phyff/resources/blob/master/styleguide.pdf).
+
+All of our branding resources are available [here](https://github.com/phyff/resources).
