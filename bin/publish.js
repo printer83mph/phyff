@@ -7,5 +7,9 @@ ghPages.publish('public', {
     src: "**/*!(.map)",
     message: "Build and deploy to pages"
 }, function(err) {
+  if(err){
     console.log(err);
+  } else {
+    console.log("success!");
+  }
 });
