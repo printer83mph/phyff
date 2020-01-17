@@ -12,7 +12,9 @@ In order to allow publishing and compiling on any OS without writing some specia
 
 You'll need [node.js](https://nodejs.org/en/) (LTS recommended) to use this functionality.
 
-Once node is installed and this project is cloned, there's realy just one step to set stuff up (run in the repo folder):
+Make sure you have the most up-to-date version of git installed. If you don't, you might get an error later when you do `npm run publish`.
+
+Once node is installed, git is up-to-date, and this project is cloned, there's really just one step to set stuff up (run in the repo folder):
 ```sh
 npm install
 ```
