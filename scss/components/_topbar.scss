@@ -1,8 +1,10 @@
+@use "../helpers/variables" as vars;
 @use "../helpers/colors";
 @use "../helpers/type";
 @use "../helpers/breakpoints" as break;
 
 .top {
+    
     display: block;
     padding: 10px 0;
     margin: 0;
@@ -46,11 +48,12 @@
 
 }
 
-.small {
-    padding: 5px 0;
-    height: 65px;
+.headerspace {
+    height: vars.$topbar-max;
+}
 
-    div {
-        background-image: url("../media/logo_mobile.png");
+@include break.width(break.$tablet) {
+    .headerspace {
+        height: 0;
     }
 }

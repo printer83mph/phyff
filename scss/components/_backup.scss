@@ -21,7 +21,7 @@
         opacity: 1;
     }
 
-    @include break.width(break.$desktop) {
+    @include break.width(break.$desktop + 180px) {
         display: block;
     }
 }
