@@ -1,7 +1,6 @@
-@import "../custom/globals.scss";
 
 .learn {
-    background-image: $bg_learn_mobile;
+    background-image: mobile_bg($learn_color);
 
     h3 {
         font-size: 1.3em;

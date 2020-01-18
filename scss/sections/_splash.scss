@@ -1,4 +1,6 @@
-@import "../custom/globals.scss";
+@use "../helpers/variables";
+@use "../helpers/colors";
+@use "../helpers/breakpoints";
 
 .top {
     display: block;

@@ -1,8 +1,7 @@
-@import "../custom/globals.scss";
 
 .people {
 
-    background-image: $bg_people_mobile;
+    background-image: mobile_bg($people_color);
 
     h2 {
         margin: 0;

@@ -1,0 +1,57 @@
+
+@mixin background($base-color, $background-url) {
+
+    // base mobile case
+    background-image: linear-gradient(color.adjust($basecolor, $saturation: -10%, $lightness: -20%), $basecolor);
+
+    @include on-mouse() {
+
+        // so we don't have to write this twice
+        $bgcolor: color.change($base-color, $alpha: $background-alpha);
+
+        // This workaround lets us have a transparent single-color background over an image
+        background: linear-gradient($base-color, $base-color, url($image-file));
+
+    }
+
+}
+
+
+section {
+    position: relative;
+}
+
+.section {
+    min-height: calc(100vh - #{$topbar_min});
+
+    // background-size: auto 30px;
+    background-repeat: no-repeat;
+
+    article {
+        min-height: inherit;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $text_light_heavy;
+        background-color: $bg_dark_light_med;
+    }
+
+    h1 {
+        font-family: "DIN Alternate Bold";
+        font-size: 45px;
+        margin: 0;
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-family: $header2_font;
+    }
+
+    p {
+        // margin: 0 30px;
+        padding: 10px 30px 20px 30px;
+        text-align: left;
+    }
+}

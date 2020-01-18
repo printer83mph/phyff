@@ -1,11 +1,11 @@
-@import "../custom/globals.scss";
-@import "../custom/breakpoints.scss";
+
+@use "../helpers/colors";
+@use "../helpers/breakpoints";
+@use "../components/section";
 
 .submit {
 
-    background-image: $bg_submit_mobile;
-    background-color: $bg_dark_light;
-    transition: background-color 0.2s;
+    @include section.background(breakpoints.$desktop);
 
     a {
         margin-top: 0;
@@ -29,6 +29,7 @@
     h2 {
         text-align: center;
     }
+
 }
 
 .submit-list {
@@ -54,7 +55,7 @@
         padding-top: 15px;
     }
 
-    @include break(800px) {
+    @include breakpoints.width(800px) {
         
         display: flex;
         flex-direction: row;

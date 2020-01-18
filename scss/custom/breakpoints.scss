@@ -1,5 +1,0 @@
-@mixin break($point) {
-    @media screen and (min-width: $point) {
-        @content;
-    }
-}

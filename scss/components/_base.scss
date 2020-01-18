@@ -1,0 +1,35 @@
+@use "../helpers/variables";
+@use "../helpers/colors";
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    height: auto;
+    font-family: variables.$body_font;
+    font-size: 14pt;
+    color: $text_dark_med;
+    background-color: $bg_dark_full;
+    text-align: center;
+
+    &::-webkit-scrollbar {
+        background-color: $bg_dark_full;
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $bg_light_light;
+
+        &:hover {
+            background-color: $bg_light_med;
+        }
+    }
+}
