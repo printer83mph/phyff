@@ -81,9 +81,10 @@ scss
 * Design for **mobile first!** Breakpoints should be used for desktop and tablet users since they (theoretically) have more horsepower.
 * Remember to use `em`s for scaling since they're more client-friendly when it comes to user scale.
 * Avoid using `div`s for everything. Semantics help immensely for accessibility!
+* Movable/reusable components should go in either their own file or some umbrella file in `components`.
 * If something isn't self-explanatory, **add a comment!** `//` You shouldn't have to ask what something does.
 
-**Note - at the time of writing, not all these standards are in place. We will 
+**Note - at the time of writing, not all these standards are in place. You can help update everything on the `scss-update` branch if you'd like.**
 
 ## Style Resources
 Be creative! Our style guide is exactly what it sounds like - a guide. Don't be afraid to make something stylish, as long as it generally uses PHYFF's colors and design ideas.
