@@ -1,11 +1,11 @@
-
+@use "../helpers/variables";
 @use "../helpers/colors";
 @use "../helpers/breakpoints";
 @use "../components/section";
 
 .submit {
 
-    @include section.background(breakpoints.$desktop);
+    @include section.background(colors.$submit, "../media/submit_bg.jpg");
 
     a {
         margin-top: 0;
@@ -17,9 +17,9 @@
         padding: 10px;
         padding-left: 20px;
         padding-right: 20px;
-        border: 2px solid $bg_light_med;
+        border: 2px solid colors.$border-white-medium;
         border-radius: 20px;
-        background-color: $bg_light_extra_light;
+        background-color: colors.$bg-white-extralight;
     }
 
     h3 {
@@ -43,7 +43,7 @@
         padding-bottom: 15px;
         flex-grow: 1;
         font-weight: bold;
-        border-bottom: 2px solid $bg_light_med;
+        border-bottom: 2px solid colors.$border-white-medium;
     }
 
     li {
@@ -64,7 +64,7 @@
 
         ul {
             display: block;
-            border-right: 2px solid $bg_light_med;
+            border-right: 2px solid colors.$border-white-medium;
             border-bottom: 0px;
             margin-left: 70px;
             text-align: right;

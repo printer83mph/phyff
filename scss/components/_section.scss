@@ -1,20 +1,23 @@
+@use "sass:color";
+
 @use "../helpers/variables";
 @use "../helpers/colors";
 @use "../helpers/type";
+@use "../helpers/breakpoints" as break;
 
 
 @mixin background($base-color, $background-url) {
 
     // base mobile case
-    background-image: linear-gradient(color.adjust($basecolor, $saturation: -10%, $lightness: -20%), $basecolor);
+    background-image: linear-gradient(color.adjust($base-color, $saturation: -10%, $lightness: -20%), $base-color);
 
-    @include on-mouse() {
+    @include break.on-mouse() {
 
         // so we don't have to write this twice
         $bgcolor: color.change($base-color, $alpha: colors.$desktop-section-alpha);
 
         // This workaround lets us have a transparent single-color background over an image
-        background: linear-gradient($base-color, $base-color, url($image-file));
+        background: linear-gradient($base-color, $base-color, url($background-url));
 
     }
 
