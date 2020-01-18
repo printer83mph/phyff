@@ -1,31 +1,7 @@
-@use "../helpers/variables";
+@use "../helpers/variables" as vars;
 @use "../helpers/colors";
+@use "../helpers/type";
 @use "../helpers/breakpoints";
-
-.top {
-    display: block;
-    padding: 10px 0;
-    margin: 0;
-    z-index: 2;
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    background-color: $bg_dark_heavy;
-    transition: height .2s;
-
-    h3 {
-        display: none;
-    }
-}
-
-.small {
-    padding: 5px 0;
-    height: 65px;
-
-    div {
-        background-image: url("../media/logo_mobile.png");
-    }
-}
 
 .logo {
     height: inherit;
@@ -40,11 +16,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    min-height: calc(100vh - #{$topbar_max});
+    min-height: calc(100vh - vars.$topbar_max);
 }
 
 .headerspace {
-    height: $topbar_max;
+    height: vars.$topbar_max;
 }
 
 .colcontainer {
@@ -77,8 +53,8 @@
     }
 
     h1 {
-        color: $text_light_heavy;
-        font-family: "DIN Alternate Bold";
+        color: colors.$white-heavy;
+        font-family: type.$title;
         z-index: 1;
         width: auto;
         margin: auto;
@@ -90,13 +66,13 @@
     background-image: url("../media/submit.jpg");
 
     div {
-        background-color: $bg_submitc;
+        background-color: colors.$submit;
     }
 
     // USE THIS WHEN WE CLOSE SUBMISSIONS
     h3 {
-        font-family: $body_font;
-        color: $text_light_med;
+        font-family: type.$body;
+        color: colors.$white-medium;
         position: absolute;
         left: 0;
         right: 0;
@@ -109,7 +85,7 @@
     background-image: url("../media/attend.jpg");
 
     div {
-        background-color: $bg_attendc;
+        background-color: colors.$attend;
     }
 }
 
@@ -117,13 +93,13 @@
     background-image: url("../media/learn.jpg");
 
     div {
-        background-color: $bg_learnc;
+        background-color: colors.$learn;
     }
 }
 
 .minus {
     position: relative;
-    top: -$topbar_min;
+    top: -#{vars.$topbar_min};
 }
 
 .footer {
@@ -133,8 +109,8 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background-color: $bg_dark_full;
-    color: $text_light_heavy;
+    background-color: colors.$footer;
+    color: colors.$white_heavy;
 
     a {
         font-size: 23px;
