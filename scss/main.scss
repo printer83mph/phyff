@@ -1,9 +1,5 @@
 // stuff outside of sections
 @use "components/base";
 
-// sections!
-@use "sections/splash";
-@use "sections/submit";
-@use "sections/attend";
-@use "sections/learn";
-@use "sections/people";
+// sections! (pulls from sections/_index.scss)
+@use "sections";
