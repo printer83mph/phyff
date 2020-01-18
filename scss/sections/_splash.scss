@@ -1,119 +1,162 @@
 @use "../helpers/variables" as vars;
 @use "../helpers/colors";
 @use "../helpers/type";
-@use "../helpers/breakpoints";
-
-.logo {
-    height: inherit;
-    width: 100%;
-    background-image: url("../media/logo.png");
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+@use "../helpers/breakpoints" as break;
 
 .splash {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    min-height: calc(100vh - vars.$topbar_max);
-}
 
-.headerspace {
-    height: vars.$topbar_max;
-}
+    height: 100vh;
 
-.colcontainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex-grow: 10;
-}
+    .logo {
+        height: inherit;
+        width: 100%;
+        background-image: url("../media/logo.png");
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: contain;
 
-.splashcol {
+        @include break.width(break.$tablet) {
 
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    flex-basis: 0;
-    flex-grow: 1;
-    text-decoration: none;
-    background-size: cover;
-    background-position: center center;
+            width: auto;
+            height: inherit;
+            background-image: url("../media/logo.png") !important;
 
-    div {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0.7;
+        }
     }
 
-    h1 {
-        color: colors.$white-heavy;
-        font-family: type.$title;
-        z-index: 1;
-        width: auto;
-        margin: auto;
-        font-size: 40px;
-    }
-}
-
-.submitc {
-    background-image: url("../media/submit.jpg");
-
-    div {
-        background-color: colors.$submit;
+    .headerspace {
+        height: 0;
     }
 
-    // USE THIS WHEN WE CLOSE SUBMISSIONS
-    h3 {
-        font-family: type.$body;
-        color: colors.$white-medium;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 70%;
+    // container of columns
+    article {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        flex-grow: 10;
+
+        // columns
+        &>a {
+
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            flex-basis: 0;
+            flex-grow: 1;
+            text-decoration: none;
+            background-size: cover;
+            background-position: center center;
+
+            div {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0.7;
+            }
+
+            h1 {
+                color: colors.$white-heavy;
+                font-family: type.$title;
+                z-index: 1;
+                width: auto;
+                margin: auto;
+                font-size: 40px;
+            }
+
+        }
+
     }
-}
 
-.attendc {
-    background-image: url("../media/attend.jpg");
 
-    div {
-        background-color: colors.$attend;
+    // specific section columns
+    .submitc {
+        background-image: url("../media/submit.jpg");
+
+        div {
+            background-color: colors.$submit;
+        }
+
+        // submissions closed caption
+        h3 {
+            font-family: type.$body;
+            color: colors.$white-medium;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 70%;
+        }
     }
-}
 
-.learnc {
-    background-image: url("../media/learn.jpg");
+    .attendc {
+        background-image: url("../media/attend.jpg");
 
-    div {
-        background-color: colors.$learn;
+        div {
+            background-color: colors.$attend;
+        }
     }
-}
 
-.minus {
-    position: relative;
-    top: -#{vars.$topbar_min};
-}
+    .learnc {
+        background-image: url("../media/learn.jpg");
 
-.footer {
-    margin: 0 10px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    background-color: colors.$footer;
-    color: colors.$white_heavy;
+        div {
+            background-color: colors.$learn;
+        }
+    }
 
-    a {
-        font-size: 23px;
-        font-weight: 700;
+
+    .footer {
+        margin: 0 10px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-color: colors.$footer;
+        color: colors.$white_heavy;
+
+        a {
+            font-size: 23px;
+            font-weight: 700;
+        }
+    }
+
+    // TODO: what the hell is this i dont remember
+    .minus {
+        position: relative;
+        top: -#{vars.$topbar_min};
+    }
+
+
+    @include break.width(break.$tablet) {
+
+        .splash {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            min-height: calc(100vh - vars.$topbar_max);
+        }
+        
+        .headerspace {
+            height: vars.$topbar_max;
+        }
+
+        footer {
+            overflow-x: auto;
+        }
+        
+        .colcontainer {
+            flex-direction: row;
+        }
+
+        .minus {
+            top: 0;
+        }
+        
     }
 }

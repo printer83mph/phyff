@@ -33,6 +33,11 @@
     @include break.width($break-width) {
         grid-template-columns: 500px 500px;
         padding: 40px 40px;
+
+        // flex-direction: row;
+        // padding: 40px 40px;
+        // margin: auto;
+        // width: 730px;
     }
 
     .info {
