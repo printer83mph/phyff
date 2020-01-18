@@ -32,7 +32,7 @@ section {
 }
 
 .section {
-    min-height: calc(100vh - vars.$topbar_min);
+    min-height: calc(100vh - vars.$topbar-min);
 
     // background-size: auto 30px;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ section {
     // to make sure topbar doesn't cover up content
     .minus {
         position: relative;
-        top: -#{vars.$topbar_min};
+        top: -#{vars.$topbar-min};
     }
 
     h1 {
