@@ -43,8 +43,7 @@ section {
         justify-content: center;
         color: colors.$white-heavy;
 
-        // TODO: come back to this: why is it here?!
-        // background-color: rgba(0, 0, 0, colors.$white-alpha0);
+        background-color: colors.$bg-black-light;
     }
 
     h1 {

@@ -31,11 +31,6 @@
     // container of columns
     article {
 
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        flex-grow: 10;
-
         // columns
         &>a {
 
