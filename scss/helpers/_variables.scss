@@ -1,21 +1,3 @@
 
-$text_dark_med: rgba(0, 0, 0, .87);
-
-$text_light_full: white;
-$text_light_heavy: rgba(255, 255, 255, 0.87);
-$text_light_med: rgba(255, 255, 255, .54);
-$text_light_light: rgba(255, 255, 255, .35);
-
-@font-face {
-    font-family: "DIN Alternate Bold";
-    src: url('../media/fonts/din_alt_bold.woff2') format('woff2'),
-        url('../media/fonts/din_alt_bold.woff') format('woff');
-}
-
-$title_font: "DIN Alternate Bold",
-sans-serif;
-$header2_font: freight-sans-pro;
-$body_font: proxima-soft;
-
 $topbar_min: 75px;
 $topbar_max: 120px;

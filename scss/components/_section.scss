@@ -1,3 +1,7 @@
+@use "../helpers/variables";
+@use "../helpers/colors";
+@use "../helpers/type";
+
 
 @mixin background($base-color, $background-url) {
 
@@ -7,7 +11,7 @@
     @include on-mouse() {
 
         // so we don't have to write this twice
-        $bgcolor: color.change($base-color, $alpha: $background-alpha);
+        $bgcolor: color.change($base-color, $alpha: colors.$desktop-section-alpha);
 
         // This workaround lets us have a transparent single-color background over an image
         background: linear-gradient($base-color, $base-color, url($image-file));
@@ -16,37 +20,35 @@
 
 }
 
-
 section {
     position: relative;
 }
 
 .section {
-    min-height: calc(100vh - #{$topbar_min});
+    min-height: calc(100vh - variables.$topbar_min);
 
     // background-size: auto 30px;
     background-repeat: no-repeat;
 
     article {
+        // standard article formatting
         min-height: inherit;
         max-width: 1200px;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color: $text_light_heavy;
-        background-color: $bg_dark_light_med;
+        color: colors.$white-heavy;
+
+        // TODO: come back to this: why is it here?!
+        // background-color: rgba(0, 0, 0, colors.$white-alpha0);
     }
 
     h1 {
-        font-family: "DIN Alternate Bold";
-        font-size: 45px;
+        font-family: type.$title;
+        font-size: 2.8em;
         margin: 0;
         padding: 20px 10px;
-    }
-
-    h2 {
-        font-family: $header2_font;
     }
 
     p {

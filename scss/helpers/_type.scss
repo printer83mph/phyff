@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "DIN Alternate Bold";
+    src: url('../media/fonts/din_alt_bold.woff2') format('woff2'),
+        url('../media/fonts/din_alt_bold.woff') format('woff');
+}
+
+$title: "DIN Alternate Bold", sans-serif;
+$body: proxima-soft;

@@ -1,5 +1,8 @@
-@use "../helpers/variables";
 @use "../helpers/colors";
+@use "../helpers/type";
+
+
+// HTML AND BODY
 
 html {
     margin: 0;
@@ -9,27 +12,53 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+
     box-sizing: border-box;
     height: auto;
-    font-family: variables.$body_font;
-    font-size: 14pt;
-    color: $text_dark_med;
-    background-color: $bg_dark_full;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 
+    text-align: center;
+    font-family: type.$body;
+    font-size: 14pt;
+    color: colors.$white_heavy;
+    background-color: black;
+    
+    scroll-behavior: smooth;
+
+    // funky scrollbar on chrome
     &::-webkit-scrollbar {
-        background-color: $bg_dark_full;
+        background-color: black;
         width: 12px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: $bg_light_light;
+        background-color: rbga(white, .3);
 
         &:hover {
-            background-color: $bg_light_med;
+            background-color: rgba(white, .5);
         }
     }
+}
+
+// MISC
+
+a {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: inherit;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
