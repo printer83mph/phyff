@@ -63,6 +63,36 @@
                 font-size: 40px;
             }
 
+            // funky fover effects
+            @include break.width(break.$tablet) {
+
+                h1 {
+                    transition: opacity 0.2s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+        
+                h3 {
+                    top: 60%;
+                    color: colors.$white-light;
+                    transition: transform 0.2s;
+                }
+        
+                &:hover {
+                    h1 {
+                        transform: scale(1.2);
+                    }
+        
+                    h3 {
+                        transform: scale(1.1);
+                    }
+        
+                    div {
+                        opacity: .8;
+                    }
+
+                }
+
+            }
+
         }
 
     }
@@ -121,13 +151,6 @@
         }
     }
 
-    // TODO: what the hell is this i dont remember
-    .minus {
-        position: relative;
-        top: -#{vars.$topbar_min};
-    }
-
-
     @include break.width(break.$tablet) {
 
         .splash {
@@ -147,10 +170,6 @@
         
         .colcontainer {
             flex-direction: row;
-        }
-
-        .minus {
-            top: 0;
         }
         
     }

@@ -62,6 +62,7 @@
         }
     }
 
+    // todo: just make this one element idk why will made it two
     .attend-button {
         border-radius: 30px;
         display: inline-block;
@@ -91,6 +92,17 @@
         @include break.width($break-width) {
             grid-column: 2;
             grid-row: 1;
+        }
+
+        @include break.on-mouse() {
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                
+                background-color: colors.$bg-black-medium;
+                border-color: rgba(0,0,0,0);
+
+            }
         }
     }
     
@@ -160,4 +172,26 @@
             right: 0px;
         }
     }
+
+    @include break.width(break.$desktop) {
+
+        h3 {
+            &::after {
+                width: 40%;
+            }
+
+            &::before {
+                width: 40%;
+            }
+        }
+
+        span {
+            display: inline;
+
+            &::before {
+                content: " - ";
+            }
+        }
+    }
+    
 }

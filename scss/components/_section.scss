@@ -1,6 +1,6 @@
 @use "sass:color";
 
-@use "../helpers/variables";
+@use "../helpers/variables" as vars;
 @use "../helpers/colors";
 @use "../helpers/type";
 @use "../helpers/breakpoints" as break;
@@ -14,10 +14,14 @@
     @include break.on-mouse() {
 
         // so we don't have to write this twice
-        $bgcolor: color.change($base-color, $alpha: colors.$desktop-section-alpha);
+        $bgcolor: rgba($base-color, colors.$desktop-section-alpha);
 
         // This workaround lets us have a transparent single-color background over an image
-        background: linear-gradient($base-color, $base-color, url($background-url));
+        background: linear-gradient($bgcolor, $bgcolor), url($background-url);
+
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
 
     }
 
@@ -28,7 +32,7 @@ section {
 }
 
 .section {
-    min-height: calc(100vh - variables.$topbar_min);
+    min-height: calc(100vh - vars.$topbar_min);
 
     // background-size: auto 30px;
     background-repeat: no-repeat;
@@ -46,6 +50,12 @@ section {
         background-color: colors.$bg-black-light;
     }
 
+    // to make sure topbar doesn't cover up content
+    .minus {
+        position: relative;
+        top: -#{vars.$topbar_min};
+    }
+
     h1 {
         font-family: type.$title;
         font-size: 2.8em;
@@ -58,11 +68,22 @@ section {
         padding: 10px 30px 20px 30px;
         text-align: left;
     }
+    
+    @include break.on-mouse() {
+        
+    }
 
     @include break.width(break.$tablet) {
 
+        min-height: 100vh;
+
+        // scroll directly to this section
+        .minus {
+            top: 0;
+        }
+
         h1 {
-            font-size: 60px;
+            font-size: 3.7em;
         }
 
         h2 {
@@ -78,4 +99,13 @@ section {
         }
         
     }
+    
+    @include break.width(break.$desktop) {
+
+        h1 {
+            font-size: 5.6em;
+        }
+
+    }
+
 }

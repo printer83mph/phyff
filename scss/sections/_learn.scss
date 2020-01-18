@@ -53,6 +53,40 @@
             margin-bottom: 20px;
         }
     }
+
+    @include breakpoints.width(breakpoints.$desktop) {
+
+        .prev-winners {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 50px;
+    
+            p {
+                padding: 5px 40px;
+                text-align: center;
+                margin: 0;
+            }
+    
+            div {
+                padding: 20px;
+            }
+        }
+    
+        .narrative {
+            border-right: 2px solid colors.$bg-white-medium;
+            border-bottom: 2px solid colors.$bg-white-medium;
+        }
+    
+        .experimental {
+            border-bottom: 2px solid colors.$bg-white-medium;
+        }
+    
+        .documentary {
+            border-right: 2px solid colors.$bg-white-medium;
+        }
+
+    }
+
 }
 
 // .workshop-list {

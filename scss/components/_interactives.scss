@@ -1,4 +1,5 @@
 @use "../helpers/colors";
+@use "../helpers/breakpoints" as break;
 
 // scroll to top button
 .back-up {
@@ -18,6 +19,10 @@
 
     &:hover {
         opacity: 1;
+    }
+
+    @include break.width(break.$desktop) {
+        display: block;
     }
 }
 
