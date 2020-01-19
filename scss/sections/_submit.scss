@@ -1,7 +1,9 @@
 @use "../helpers/variables";
 @use "../helpers/colors";
 @use "../helpers/breakpoints";
+
 @use "../components/section";
+@use "../components/buttons";
 
 .submit {
 
@@ -9,48 +11,43 @@
 
     // big submit button
     a {
-        margin-top: 0;
+        margin: 0;
+        padding: 10px 20px;
+
+        @include buttons.big-button();
+        border-radius: 20px;
+
         text-decoration: none;
         font-size: 35px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border: 2px solid colors.$border-white-medium;
-        border-radius: 20px;
-        background-color: colors.$bg-black-light;
-        
-        @include breakpoints.on-mouse() {
-            transition: 0.3s;
-
-            &:hover {
-                background-color: colors.$bg-black-medium;
-                border-color: rgba(0,0,0,0);
-            }
-        }
-        
-        @include breakpoints.width(breakpoints.$tablet) {
-
-            margin-left: auto;
-            margin-right: auto;
-
-        }
 
     }
 
-    h3 {
-        margin-top: 15px;
+    p {
+        margin: 0;
     }
 
     h2 {
         text-align: center;
+        margin-top: 0;
+    }
+
+    @include breakpoints.width(breakpoints.$desktop) {
+
+        a {
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 4.6em;
+        }    
+
     }
 
 }
 
 .submit-list {
+
+    margin: 15px 0;
 
     ul {
         display: grid;
