@@ -90,4 +90,4 @@ scss
 Be creative! Our style guide is exactly what it sounds like - a guide. Don't be afraid to make something stylish, as long as it generally uses PHYFF's colors and design ideas.
 
 * [PHYFF branding resources](https://github.com/phyff/resources) for all your possible styling needs
-* [Styleguide](https://github.com/phyff/resources/blob/master/styleguide.pdf) for quick reference
+* [Styleguide](https://github.com/phyff/resources/blob/master/design/exports/styleguide.pdf) for quick reference
