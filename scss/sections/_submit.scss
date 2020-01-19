@@ -1,5 +1,6 @@
 @use "../helpers/variables";
 @use "../helpers/colors";
+@use "../helpers/type";
 @use "../helpers/breakpoints";
 
 @use "../components/section";
@@ -18,7 +19,7 @@
         border-radius: 20px;
 
         text-decoration: none;
-        font-size: 35px;
+        font-size: type.$buttonsize;
 
     }
 
