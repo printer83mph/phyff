@@ -38,7 +38,7 @@ section {
     background-repeat: no-repeat;
 
     article {
-        // standard article formatting
+
         min-height: inherit;
         max-width: 1200px;
         margin: auto;
@@ -48,6 +48,7 @@ section {
         color: colors.$white-heavy;
 
         background-color: colors.$bg-black-light;
+
     }
 
     // to make sure topbar doesn't cover up content
@@ -61,6 +62,10 @@ section {
         font-size: 2.8em;
         margin: 0;
         padding: 20px 10px;
+    }
+
+    h2 {
+        font-family: type.$h2;
     }
 
     p {

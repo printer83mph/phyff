@@ -26,18 +26,21 @@ body {
     
     scroll-behavior: smooth;
 
-    // funky scrollbar on chrome
-    &::-webkit-scrollbar {
-        background-color: black;
-        width: 12px;
-    }
+}
 
-    &::-webkit-scrollbar-thumb {
-        background-color: rbga(white, .3);
+// funky scrollbar on chrome
+::-webkit-scrollbar {
+    background-color: black;
+    width: 12px;
+}
 
-        &:hover {
-            background-color: rgba(white, .5);
-        }
+::-webkit-scrollbar-thumb {
+
+    // for some reason doing rgba(white, .2) doesn't work.
+    background-color: rgba(255, 255, 255, .2);
+
+    &:hover {
+        background-color: rgba(white, .4);
     }
 }
 

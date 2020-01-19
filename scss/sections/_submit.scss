@@ -20,7 +20,7 @@
         padding-right: 20px;
         border: 2px solid colors.$border-white-medium;
         border-radius: 20px;
-        background-color: colors.$bg-white-extralight;
+        background-color: colors.$bg-black-light;
         
         @include breakpoints.on-mouse() {
             transition: 0.3s;
