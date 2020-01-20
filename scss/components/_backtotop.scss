@@ -2,7 +2,7 @@
 @use "../helpers/breakpoints" as break;
 
 // scroll to top button
-.back-up {
+@mixin base() {
     display: none;
     position: absolute;
     right: 20px;
@@ -21,13 +21,15 @@
         opacity: 1;
     }
 
+    // only show if wide enough
     @include break.width(break.$desktop + 180px) {
         display: block;
     }
-}
 
-// when scrolled past first section
-.floating-back-up {
-    position: fixed;
-    top: 20px;
+    // for when scrolled past first section
+    &.floating {
+        position: fixed;
+        top: 20px;
+    }
+
 }
