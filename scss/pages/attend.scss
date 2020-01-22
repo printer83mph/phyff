@@ -8,7 +8,33 @@
         justify-content: initial;
     }
 }
+.attend-button {
+    border-radius: 30px;
+    display: inline-block;
+    max-width: 350px;
+    color: $text_light_full;
+    background-color: $bg_dark_light;
 
+    text-decoration: none;
+    font-family: $title_font;
+    text-align: center;
+    font-size: 40px;
+
+    transition: background-color 0.2s;
+
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto auto;
+    margin-top: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+        font-family: proxima-soft;
+    }
+
+}
 .attend-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -25,7 +51,7 @@
     .info {
         grid-column: 1;
         grid-row: 2;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.4); 
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 
         @include break(1040px) {
             grid-row: 1 / 3;
@@ -44,38 +70,8 @@
         }
     }
 
-    .attend-button {
-        border-radius: 30px;
-        display: inline-block;
-        max-width: 350px;
-        color: $text_light_full;
-        background-color: $bg_dark_light;
-        
-        text-decoration: none;
-        font-family: $title_font;
-        text-align: center;
-        font-size: 40px;
-        
-        transition: background-color 0.2s;
 
-        grid-column: 1;
-        grid-row: 1;
-        margin: auto auto;
-        margin-top: 20px;
-        border: 2px solid rgba(255, 255, 255, 0.4);
-        padding: 20px;
-        
-        a {
-            text-decoration: none;
-            font-family: proxima-soft;
-        }
 
-        @include break(1040px) {
-            grid-column: 2;
-            grid-row: 1;
-        }
-    }
-    
     .workshop-list {
         grid-column: 1;
         grid-row: 3;
