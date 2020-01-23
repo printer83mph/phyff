@@ -16,9 +16,26 @@
 
 }
 
+.button {
+
+    display: inline-block;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 30px;
+    @include buttons.big-button();
+
+    text-align: center;
+    text-decoration: none;
+    font-family: type.$body;
+    font-size: type.$buttonsize;
+
+}
 
 .attend-grid {
-    
+
     $break-width: 1040px;
 
     margin: auto;
@@ -35,32 +52,11 @@
 
     }
 
-    .button {
 
-        display: inline-block;
-        max-width: 350px;
-        margin: auto;
-        margin-top: 20px;
-        padding: 20px;
-    
-        border-radius: 30px;
-        @include buttons.big-button();
-        
-        text-align: center;
-        text-decoration: none;
-        font-family: type.$body;
-        font-size: type.$buttonsize;
-    
-        @include break.width($break-width) {
-            grid-column: 2;
-            grid-row: 1;
-        }
-    
-    }
 
     .info {
 
-        border-bottom: 2px solid rgba(255, 255, 255, 0.4); 
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 
         h2 {
             margin-bottom: 0px;
@@ -79,7 +75,7 @@
         }
 
     }
-    
+
     .workshop-list {
 
         h1 {
@@ -165,5 +161,5 @@
             }
         }
     }
-    
+
 }
