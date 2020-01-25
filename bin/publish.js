@@ -4,7 +4,7 @@ console.log("it is publishing");
 
 ghPages.publish('public', {
     push: true,
-    src: "**/*!(.map)",
+    src: "**/!(*.map)",
     message: "Build and deploy to pages"
 }, function(err) {
   if(err){
