@@ -1,6 +1,6 @@
 const ghPages = require('gh-pages');
 
-console.log("it is publishing");
+console.log("it is publishing...");
 
 ghPages.publish('public', {
     push: true,
