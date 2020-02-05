@@ -1,0 +1,59 @@
+@use "../helpers/variables" as vars;
+@use "../helpers/colors";
+@use "../helpers/type";
+@use "../helpers/breakpoints" as break;
+
+.top {
+    
+    display: block;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: colors.$topbar;
+    transition: height .2s;
+
+    h3 {
+        display: none;
+        
+        color: white;
+        font-family: type.$title;
+        font-size: 4vh;
+        margin: 20px 0;
+    }
+
+    @include break.width(break.$tablet) {
+
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        padding: 0;
+        margin-top: 8vh;
+        background: none;
+
+        height: 11vh;
+        min-height: 110px;
+        max-height: 165px;
+
+        width: 30vh;
+        min-width: 300px;
+        max-width: 450px;
+
+        h3 {
+            display: block;
+        }
+    }
+
+}
+
+.headerspace {
+    height: vars.$topbar-max;
+}
+
+@include break.width(break.$tablet) {
+    .headerspace {
+        height: 0;
+    }
+}

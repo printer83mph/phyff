@@ -6,10 +6,10 @@
 
         document.addEventListener("scroll", function () {
             if (window.scrollY > window.innerHeight) {
-                backUp.classList.add("floating-back-up");
+                backUp.classList.add("floating");
                 topBtn.classList.add("small");
             } else {
-                backUp.classList.remove("floating-back-up");
+                backUp.classList.remove("floating");
                 if (window.scrollY > 45) {
                     topBtn.classList.add("small");
                 } else {

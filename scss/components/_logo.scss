@@ -1,0 +1,33 @@
+@use "../helpers/breakpoints" as break;
+
+.logo {
+
+    height: inherit;
+    width: 100%;
+    background-image: url("../media/logo.png");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+@media screen and (max-width: break.$tablet) {
+    .small {
+        padding: 5px 0;
+        height: 65px;
+    
+        div {
+            background-image: url("../media/logo_mobile.png");
+        }
+    }    
+}
+
+@include break.width(break.$tablet) {
+
+    .logo {
+        width: auto;
+        height: inherit;
+        background-image: url("../media/logo.png") !important;    
+    }
+
+}

@@ -1,0 +1,20 @@
+@use "../helpers/colors";
+@use "../helpers/breakpoints";
+
+@mixin big-button {
+
+    // base color stuff
+    background-color: colors.$bg-black-light;
+    border: 2px solid colors.$border-white-medium;
+
+    // funky effects on hover
+    @include breakpoints.on-mouse() {
+        transition: 0.3s;
+
+        &:hover {
+            background-color: colors.$bg-black-medium;
+            border-color: rgba(colors.$border-white-medium,0);
+        }
+    }
+
+}

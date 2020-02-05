@@ -4,14 +4,15 @@
     "private": true,
     "author": "Thomas Shaw <printer.83mph@gmail.com>",
     "contributors": [
-        "Will Hagele <willhagele@gmail.com>"
+        "Will Hagele <willhagele@gmail.com>",
+        "Leo Kastenberg <lkastenberg@gmail.com>"
     ],
     "version": "1.0.0",
     "dependencies": {},
     "devDependencies": {
         "gh-pages": "^2.1.1",
         "nodemon": "^1.19.3",
-        "sass": "^1.23.0"
+        "sass": "^1.25.0"
     },
     "scripts": {
         "compile": "node bin/compile.js",

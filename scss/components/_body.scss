@@ -1,0 +1,73 @@
+@use "../helpers/colors";
+@use "../helpers/type";
+
+
+// HTML AND BODY
+@mixin base() {
+
+    html {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+
+    body {
+
+        box-sizing: border-box;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+        text-align: center;
+        font-family: type.$body;
+        font-size: type.$bodysize;
+        color: colors.$white_heavy;
+        background-color: black;
+        
+        scroll-behavior: smooth;
+
+    }
+
+}
+
+// funky scrollbar on chrome
+@mixin scrollbar() {
+    ::-webkit-scrollbar {
+        background-color: black;
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+
+        // for some reason doing rgba(white, .2) doesn't work.
+        background-color: rgba(255, 255, 255, .2);
+
+        &:hover {
+            background-color: rgba(white, .4);
+        }
+    }
+
+}
+
+// reset a elements
+@mixin reset-a {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: inherit;
+}
+
+// disallow selection
+@mixin no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
