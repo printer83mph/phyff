@@ -134,8 +134,18 @@
         color: colors.$white_heavy;
 
         a {
-            font-size: 23px;
+            font-size: 27px;//23px;
             font-weight: 700;
+        }
+
+        .sponsor_list {
+
+            img {
+                height: 40vw;
+                // padding-left: 2vw;
+                // padding-bottom: 0px;
+            }
+
         }
     }
 
@@ -152,10 +162,29 @@
             }
         }
 
-        footer {
+        .footer {
             overflow-x: auto;
+
+            
+            .sponsor_list {
+
+                img {
+                    height: 7vw;
+                    max-height: 150px;
+                }
+            }
         }
         
+    }
+
+    @include break.width(400px) { // change to two-row image
+        .footer {
+            .sponsor_list {
+                img {
+                    height: 10vw;
+                }
+            }
+        }
     }
 
 }

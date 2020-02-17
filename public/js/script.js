@@ -1,6 +1,8 @@
 (function () {
 
     window.onload = function () {
+        var one_two_layers_for_logos = 400;
+        var sponsorLogos = document.getElementById("sponsor-logos");
         var backUp = document.getElementById("back-up");
         var topBtn = document.getElementById("top");
 
@@ -30,5 +32,15 @@
         //     });
         // }
 
+        var setSponsorLogoLayerness = function(){            
+        if (window.innerWidth > one_two_layers_for_logos){
+            sponsorLogos.src = "media/sponsor_logos/logo_banner.png";
+        } else {
+            sponsorLogos.src = "media/sponsor_logos/logo_banner_mobile.png";
+        }};
+        setSponsorLogoLayerness(); //sets the correct image on load
+        window.addEventListener('resize', setSponsorLogoLayerness); //changes the sponsors image on resize
+
     }
 })();
+
