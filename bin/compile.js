@@ -6,4 +6,4 @@ var result = sass.renderSync({
     outputStyle: "compressed"
 });
 
-fs.writeFileSync("public/css/styles.css", result.css);
+fs.writeFileSync("public/css/style.css", result.css);
