@@ -7,7 +7,7 @@ function SubmitSection(): React.ReactElement {
 
     useEffect(() => {
         setSubmissionStatus(getSubmissionStatus());
-    });
+    }, []);
 
     function getSubmissionsOpen(): boolean {
         if (submissionStatus != null) {

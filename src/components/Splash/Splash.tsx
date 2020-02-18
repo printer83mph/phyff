@@ -8,7 +8,7 @@ function Splash(): React.ReactElement {
 
     useEffect(() => {
         setSubmissionStatus(getSubmissionStatus());
-    });
+    }, []);
 
 
     function handleSubmit(e) {
