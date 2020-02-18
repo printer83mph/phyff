@@ -4,7 +4,7 @@
 
     height: inherit;
     width: 100%;
-    background-image: url("../media/logo.png");
+    background-image: url("media/logo.png");
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -16,9 +16,9 @@
         padding: 5px 0;
         height: 65px;
         pointer-events: all;
-        
+    
         div {
-            background-image: url("../media/logo_mobile.png");
+            background-image: url("media/logo_mobile.png");
         }
     }    
 }
@@ -28,7 +28,7 @@
     .logo {
         width: auto;
         height: inherit;
-        background-image: url("../media/logo.png") !important;    
+        background-image: url("media/logo.png") !important;
     }
 
 }

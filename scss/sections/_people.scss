@@ -5,7 +5,7 @@
 
 .people {
 
-    @include section.background(colors.$people, "../media/more_bg.jpg");
+    @include section.background(colors.$people, "media/more_bg.jpg");
 
     h2 {
         margin: 0;

@@ -1,23 +1,45 @@
 {
-    "name": "phyff",
-    "description": "Official website for the Philly Youth Film Fest",
-    "private": true,
-    "author": "Thomas Shaw <printer.83mph@gmail.com>",
-    "contributors": [
-        "Will Hagele <willhagele@gmail.com>",
-        "Leo Kastenberg <lkastenberg@gmail.com>"
+  "name": "phyff",
+  "description": "Official website for the Philly Youth Film Fest",
+  "private": true,
+  "author": "Thomas Shaw <printer.83mph@gmail.com>",
+  "contributors": [
+    "Will Hagele <willhagele@gmail.com>",
+    "Leo Kastenberg <lkastenberg@gmail.com>",
+    "Robert May <robertmay2003@gmail.com>"
+  ],
+  "version": "2.0.0",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "sass": "^1.25.0",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "start": "npm run-script compileDev; npm run-script build; react-scripts start",
+    "compileDev": "node bin/compileDev.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
-    "version": "1.0.0",
-    "dependencies": {},
-    "devDependencies": {
-        "gh-pages": "^2.1.1",
-        "nodemon": "^1.19.3",
-        "sass": "^1.25.0"
-    },
-    "scripts": {
-        "compile": "node bin/compile.js",
-        "compileDev": "node bin/compileDev.js",
-        "watch": "nodemon -e scss -x \"npm run compileDev\" ",
-        "publish": "node bin/compile.js && node bin/publish.js"
-    }
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

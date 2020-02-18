@@ -8,7 +8,7 @@
 
 .attend {
 
-    @include section.background(colors.$attend, "../media/attend_bg.jpg");
+    @include section.background(colors.$attend, "media/attend_bg.jpg");
 
     article {
         justify-content: initial;
