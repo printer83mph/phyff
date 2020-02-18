@@ -7,33 +7,33 @@
 @use "../components/logo";
 
 .splash {
-
+    
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     min-height: calc(100vh - #{vars.$topbar-max});
-
+    
     // column container
     article {
-
+        
         flex-grow: 10;
         display: flex;
         flex-direction: column;
         align-items: stretch;
-
+        
         // columns
         &>a {
-
+            
             position: relative;
             flex-grow: 1;
             flex-basis: 0;
-
+            
             display: flex;
-
+            
             text-align: center;
             background-size: cover;
             background-position: center center;
-
+            
             // big color thing for each column
             div {
                 position: absolute;
@@ -43,7 +43,7 @@
                 right: 0;
                 opacity: 0.85;
             }
-
+            
             h1 {
                 z-index: 1;
                 color: colors.$white-heavy;
@@ -51,15 +51,15 @@
                 font-size: 2.1em;
                 margin: auto;
             }
-
+            
             // specific columns
             &.submitc {
                 background-image: url("../media/submit.jpg");
-        
+                
                 div {
                     background-color: colors.$submit;
                 }
-        
+                
                 // submissions closed caption
                 h3 {
                     font-family: type.$body;
@@ -71,58 +71,58 @@
                     top: 70%;
                 }
             }
-
+            
             &.attendc {
                 background-image: url("../media/attend.jpg");
-        
+                
                 div {
                     background-color: colors.$attend;
                 }
             }
-
+            
             &.learnc {
                 background-image: url("../media/learn.jpg");
-        
+                
                 div {
                     background-color: colors.$learn;
                 }
             }
-
+            
             // funky hover effects
             @include break.on-mouse() {
-
+                
                 h1 {
                     transition: opacity 0.2s linear, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 }
-        
+                
                 h3 {
                     top: 60%;
                     color: colors.$white-light;
                     transition: transform 0.2s;
                 }
-        
+                
                 &:hover {
                     h1 {
                         transform: scale(1.2);
                     }
-        
+                    
                     h3 {
                         transform: scale(1.1);
                     }
-        
+                    
                     div {
                         opacity: .7;
                     }
-
+                    
                 }
-
+                
             }
-
+            
         }
-
+        
     }
-
-
+    
+    
     .footer {
         margin: 0 10px;
         flex-grow: 1;
@@ -132,59 +132,48 @@
         justify-content: center;
         background-color: colors.$footer;
         color: colors.$white_heavy;
-
+        
         a {
             font-size: 27px;//23px;
             font-weight: 700;
         }
-
+        
         .sponsor_list {
-
+            
             img {
                 height: 40vw;
                 // padding-left: 2vw;
                 // padding-bottom: 0px;
+                
+                @include break.width(400px) { // change to two-row image
+                    height: 10vw;
+                }
             }
-
+            
         }
     }
-
+    
     @include break.width(break.$tablet) {
-
+        
         // headerspace is gone so take up the entire guy
         height: 100vh;
-
+        
         article {
             flex-direction: row;
-
+            
             &>a {
                 height: 100%;
             }
         }
-
-        .footer {
-            overflow-x: auto;
-
+        
+        .footer  .sponsor_list {
             
-            .sponsor_list {
-
-                img {
-                    height: 7vw;
-                    max-height: 150px;
-                }
+            img {
+                height: 7vw;
+                max-height: 150px;
             }
         }
         
     }
-
-    @include break.width(400px) { // change to two-row image
-        .footer {
-            .sponsor_list {
-                img {
-                    height: 10vw;
-                }
-            }
-        }
-    }
-
+    
 }
