@@ -54,7 +54,7 @@
 
             // specific columns
             &.submitc {
-                background-image: url("../media/submit.jpg");
+                background-image: url("media/submit.jpg");
         
                 div {
                     background-color: colors.$submit;
@@ -73,7 +73,7 @@
             }
 
             &.attendc {
-                background-image: url("../media/attend.jpg");
+                background-image: url("media/attend.jpg");
         
                 div {
                     background-color: colors.$attend;
@@ -81,7 +81,7 @@
             }
 
             &.learnc {
-                background-image: url("../media/learn.jpg");
+                background-image: url("media/learn.jpg");
         
                 div {
                     background-color: colors.$learn;
@@ -134,7 +134,7 @@
         color: colors.$white_heavy;
 
         a {
-            font-size: 27px;//23px;
+            font-size: 23px;
             font-weight: 700;
         }
 
@@ -147,6 +147,7 @@
             }
 
         }
+
     }
 
     @include break.width(break.$tablet) {
@@ -162,10 +163,9 @@
             }
         }
 
-        .footer {
+        footer {
             overflow-x: auto;
 
-            
             .sponsor_list {
 
                 img {
@@ -173,6 +173,7 @@
                     max-height: 150px;
                 }
             }
+
         }
         
     }
@@ -186,5 +187,4 @@
             }
         }
     }
-
 }

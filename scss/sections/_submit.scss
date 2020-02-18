@@ -8,7 +8,7 @@
 
 .submit {
 
-    @include section.background(colors.$submit, "../media/submit_bg.jpg");
+    @include section.background(colors.$submit, "media/submit_bg.jpg");
 
     // big submit button
     a {

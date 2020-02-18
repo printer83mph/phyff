@@ -5,7 +5,7 @@
 
 .learn {
 
-    @include section.background(colors.$learn, "../media/learn_bg.jpg");
+    @include section.background(colors.$learn, "media/learn_bg.jpg");
 
     .about-phyff {
         p {
