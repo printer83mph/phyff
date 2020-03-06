@@ -29,7 +29,7 @@ function css() {
 
 exports.watch = function() {
   
-  watch('src/scss/**/*.scss', css);
+  watch('scss/**/*.scss', css);
 
 }
 
