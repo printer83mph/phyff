@@ -12,12 +12,18 @@
     "devDependencies": {
         "gh-pages": "^2.1.1",
         "nodemon": "^1.19.3",
-        "sass": "^1.25.0"
+        "sass": "^1.25.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-mode": "^1.0.2",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5"
     },
     "scripts": {
-        "compile": "node bin/compile.js",
-        "compileDev": "node bin/compileDev.js",
-        "watch": "nodemon -e scss -x \"npm run compileDev\" ",
-        "publish": "node bin/compile.js && node bin/publish.js"
+        "compile": "gulp",
+        "compileDev": "gulp --development",
+        "watch": "gulp watch --development",
+        "publish": "gulp && node bin/publish.js"
     }
 }
