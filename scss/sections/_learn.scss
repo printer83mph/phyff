@@ -19,34 +19,56 @@
             }
         }
     }
-    
-    .prev-winners {
 
-        text-
+    .finalist-list {
 
-        span {
-            &::after {
-                content: " - ";
-            }
-    
-            &::before {
-                content: " - ";
-            }
-    
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        p {
-            text-align: inherit;
-        }
-    
         h3 {
-            font-size: 1.3rem;
-            margin-top: 0;
+            text-align: left;
+            padding: 20px;
+            padding-bottom: 0;
         }
-    
+
+        ul {
+            padding: 0;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        li {
+            text-align: left;
+            padding-bottom: 15px;
+            font-size: 1em;
+        }
+
     }
+    
+    // .prev-winners {
+
+    //     text-
+
+    //     span {
+    //         &::after {
+    //             content: " - ";
+    //         }
+    
+    //         &::before {
+    //             content: " - ";
+    //         }
+    
+    //         font-weight: bold;
+    //         font-style: normal;
+    //     }
+
+    //     p {
+    //         text-align: inherit;
+    //     }
+    
+    //     h3 {
+    //         font-size: 1.3rem;
+    //         margin-top: 0;
+    //     }
+    
+    // }
     
     .inline-link {
         text-decoration: underline;
@@ -64,20 +86,41 @@
 
     @include breakpoints.width(breakpoints.$desktop) {
 
-        .prev-winners {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            padding: 20px 50px;
-            text-align: center;
+        // .prev-winners {
+        //     display: grid;
+        //     grid-template-columns: repeat(2, 1fr);
+        //     padding: 20px 50px;
+        //     text-align: center;
 
-            p {
-                padding: 5px 10px;
-                margin: 0;
-            }
+        //     p {
+        //         padding: 5px 10px;
+        //         margin: 0;
+        //     }
     
-            div {
-                padding: 20px;
+        //     div {
+        //         padding: 20px;
+        //     }
+        // }
+
+        .finalist-list {
+            h2 {
+                text-align: center;
+                margin: 0px;
+                padding-bottom: 15px;
             }
+
+            ul {
+                padding-left: 0;
+            }
+            
+            text-align: center;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            padding-left: 10vw;
+            padding-right: 10vw;
+            border-left: 2px solid rgba(255, 255, 255, 0.4);
+            border-right: 2px solid rgba(255, 255, 255, 0.4);
+
         }
     
         .narrative {

@@ -97,6 +97,10 @@
         //     // font-family: type.$body;
         // }
 
+        h2 {
+            
+        }
+
         p {
             margin: 0;
             padding-bottom: 10px;
@@ -112,7 +116,7 @@
 
         @include break.width($break-width) {
             grid-column: 2;
-            grid-row: 2;
+            grid-row: 1;
         }
     }
 }
