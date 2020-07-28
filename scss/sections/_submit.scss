@@ -11,8 +11,7 @@
     @include section.background(colors.$submit, "../media/submit_bg.jpg");
 
     // big submit button
-    a {
-        margin: 0;
+    a.cta {
         padding: 10px 20px;
 
         @include buttons.big-button();
