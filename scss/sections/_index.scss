@@ -1,0 +1,35 @@
+// all Da Pages
+@use "../components/body";
+@use "../components/section";
+@use "../components/backtotop";
+
+@use "./splash";
+@use "./submit";
+@use "./attend";
+@use "./learn";
+@use "./people";
+
+@include body.base();
+@include body.scrollbar();
+
+a {
+    @include body.reset-a();
+}
+
+.noselect {
+    @include body.no-select();
+}
+
+// section stuff!
+.section {
+
+    @include section.base();
+
+}
+
+// back to top button
+.back-up {
+
+    @include backtotop.base();
+
+}

@@ -1,0 +1,108 @@
+@use "sass:color";
+
+@use "../helpers/variables" as vars;
+@use "../helpers/colors";
+@use "../helpers/type";
+@use "../helpers/breakpoints" as break;
+
+
+@mixin background($base-color, $background-url) {
+
+    // base mobile case
+    background-image: linear-gradient(color.adjust($base-color, $saturation: -10%, $lightness: -20%), $base-color);
+
+    @include break.on-mouse() {
+
+        // so we don't have to write this twice
+        $bgcolor: rgba($base-color, colors.$desktop-section-alpha);
+
+        // This workaround lets us have a transparent single-color background over an image
+        background: linear-gradient($bgcolor, $bgcolor), url($background-url);
+
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+}
+
+@mixin base {
+
+    position: relative;
+
+    min-height: calc(100vh - #{vars.$topbar-min});
+
+    // background-size: auto 30px;
+    background-repeat: no-repeat;
+
+    article {
+
+        min-height: inherit;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: colors.$white-heavy;
+
+        background-color: colors.$bg-black-light;
+
+    }
+
+    // to make sure topbar doesn't cover up content
+    .minus {
+        position: relative;
+        top: -#{vars.$topbar-min};
+    }
+
+    h1 {
+        font-family: type.$title;
+        font-size: 2.8em;
+        margin: 0;
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-family: type.$h2;
+    }
+
+    p {
+        // margin: 0 30px;
+        padding: 10px 30px 20px 30px;
+        text-align: left;
+    }
+    
+    @include break.on-mouse() {
+        
+    }
+
+    @include break.width(break.$tablet) {
+
+        min-height: 100vh;
+
+        // scroll directly to this section
+        .minus {
+            top: 0;
+        }
+
+        h1 {
+            font-size: 3.7em;
+        }
+
+        // h2 {
+        //     text-align: left;
+        //     margin: 0 0;
+        // }
+        
+    }
+    
+    @include break.width(break.$desktop) {
+
+        h1 {
+            font-size: 5em;
+        }
+
+    }
+
+}

@@ -1,0 +1,98 @@
+@use "../helpers/variables";
+@use "../helpers/colors";
+@use "../helpers/breakpoints";
+@use "../components/section";
+
+.learn {
+
+    @include section.background(colors.$learn, "../../public/media/learn_bg.jpg");
+
+    .about-phyff {
+        p {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, .2);
+    
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    
+    .prev-winners {
+
+        text-
+
+        span {
+            &::after {
+                content: " - ";
+            }
+    
+            &::before {
+                content: " - ";
+            }
+    
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        p {
+            text-align: inherit;
+        }
+    
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
+    
+    }
+    
+    .inline-link {
+        text-decoration: underline;
+    }
+    
+    .nathaniel-bio {
+        text-align: left;
+        margin: 20px 20px 20px 20px;
+    
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include breakpoints.width(breakpoints.$desktop) {
+
+        .prev-winners {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 50px;
+            text-align: center;
+
+            p {
+                padding: 5px 10px;
+                margin: 0;
+            }
+    
+            div {
+                padding: 20px;
+            }
+        }
+    
+        .narrative {
+            border-right: 2px solid colors.$bg-white-medium;
+            border-bottom: 2px solid colors.$bg-white-medium;
+        }
+    
+        .experimental {
+            border-bottom: 2px solid colors.$bg-white-medium;
+        }
+    
+        .documentary {
+            border-right: 2px solid colors.$bg-white-medium;
+        }
+
+    }
+
+}

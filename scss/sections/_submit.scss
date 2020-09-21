@@ -1,0 +1,140 @@
+@use "../helpers/variables";
+@use "../helpers/colors";
+@use "../helpers/type";
+@use "../helpers/breakpoints";
+
+@use "../components/section";
+@use "../components/buttons";
+
+.submit {
+
+    @include section.background(colors.$submit, "../../public/media/submit_bg.jpg");
+
+    // big submit button
+    a {
+        margin: 0;
+        padding: 10px 20px;
+
+        @include buttons.big-button();
+        border-radius: 20px;
+
+        text-decoration: none;
+        font-size: type.$buttonsize;
+
+    }
+
+    p {
+        margin: 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    @include breakpoints.width(breakpoints.$desktop) {
+
+        a {
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 4.6em;
+        }    
+
+    }
+
+}
+
+.submit-list {
+
+    margin: 15px 0;
+
+    ul {
+        display: grid;
+        list-style: none;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 auto;
+        padding: 0 10px;
+        padding-bottom: 15px;
+        flex-grow: 1;
+        font-weight: bold;
+        border-bottom: 2px solid colors.$border-white-medium;
+    }
+
+    li {
+        padding: 10px 5px;
+        font-size: 20px;
+    }
+
+    div {
+        padding-top: 15px;
+    }
+
+    @include breakpoints.width(800px) {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            display: block;
+            border-right: 2px solid colors.$border-white-medium;
+            border-bottom: 0px;
+            margin-left: 70px;
+            text-align: right;
+
+        }
+
+        div {
+            flex-grow: 5;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        li {
+            display:block;
+            padding: 15px;
+            padding-right: 50px;
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        // OLD ASS STUFF
+        //
+        // display: flex;
+        // flex-direction: row;
+        // align-items: center;
+        // justify-content: center;
+
+        // ul {
+        //     display: block;
+        //     border-right: 2px solid $bg_light_med;
+        //     border-bottom: 0px;
+        //     margin-left: 70px;
+        //     text-align: right;
+
+        // }
+        // div {
+        //     flex-grow: 5;
+        //     text-align: left;
+        //     padding-left: 20px;
+        // }
+
+        // li {
+        //     display:block;
+        //     padding: 15px;
+        //     padding-right: 50px;
+        //     font-size: 25px;
+        // }
+
+        // p {
+        //     font-size: 20px;
+        // }
+
+    }    
+}
